@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Linq;
+﻿using System.Net;
 using Microsoft.AspNetCore.Mvc;
 using TandooriRecipe.Models;
 
@@ -9,20 +8,34 @@ namespace TandooriRecipe.Controllers
     {
         public IActionResult Index()
         {
-            return View(RecipeRepository.Response.Where(r=> r.Name != null) );
+            return View(RecipeRepository.Response );
         }
 
-//        [HttpGet]
-//        public IActionResult AddRecipe()
-//        {
-//            return View("Index");
-//        }
+        [HttpGet]
+        public IActionResult AddRecipe()
+        {
+            return View();
+        }
         
         [HttpPost]
         public IActionResult AddRecipe(RecipeModel newRecipe)
         {
             RecipeRepository.AddRecipeToRepo(newRecipe);
-            return View("Index");
+            return View("Index",RecipeRepository.Response);
+        }
+
+//        [HttpGet]
+        public IActionResult DisplayRecipe(int id)
+        {
+            foreach (var item in RecipeRepository.Response)
+            {
+                if (id == item.RecipeId)
+                {
+                    return View(item);
+                }
+            }
+
+            return View(null);
         }
 
         public IActionResult About()

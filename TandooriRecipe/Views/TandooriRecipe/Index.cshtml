@@ -3,23 +3,16 @@
 ViewData["Title"] = "Tandoori Recipe Home";
 }
 
-
+            
 @foreach (TandooriRecipe.Models.RecipeModel item in @Model)
 {
-  <div class="flex flex-wrap -m-3">
-    <div class="w-full sm:w-1/2 md:w-1/3 flex flex-col p-3">
-      <div class="bg-white rounded-lg shadow-lg overflow-hidden flex-1 flex flex-col">
-        <div class="bg-cover h-48" style="background-image: url(@item.imageUrl);"></div>
-        <div class="p-4 flex-1 flex flex-col">
-          <h3 class="mb-4 text-2xl"> @item.Name </h3>
-          <div class="mb-4 text-grey-darker text-sm flex-1">
-            <p> @item.Desciption </p>
-          </div>
-          <a class="border-t border-grey-light pt-2 text-xs text-grey hover:text-red uppercase no-underline tracking-wide">
-            See Recipe
-          </a>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <p class="display-2">@item.Name</p>
+            <p class="display-3">@item.Author @item.TimeRequired</p>
+            <p class="lead">@item.Ingredients</p>
+            <p class="lead">@item.Directions</p>
+            <a asp-action="DisplayRecipe" asp-route-id="@item.RecipeId"><p class="lead"> See Full Recipe </p> </a>
         </div>
-      </div>
     </div>
-  </div>
 }

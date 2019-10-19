@@ -36,6 +36,7 @@
           <e p="TandooriRecipe" t="Include">
             <e p="About.cshtml" t="Include" />
             <e p="AddRecipe.cshtml" t="Include" />
+            <e p="DisplayRecipe.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
           </e>
         </e>

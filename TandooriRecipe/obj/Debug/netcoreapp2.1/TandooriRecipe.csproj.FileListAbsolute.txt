@@ -26,3 +26,4 @@
 /Users/abhi/Documents/dotNetWeb/TandooriRecipe/TandooriRecipe/obj/Debug/netcoreapp2.1/Razor/Views/TandooriRecipe/About.g.cshtml.cs
 /Users/abhi/Documents/dotNetWeb/TandooriRecipe/TandooriRecipe/obj/Debug/netcoreapp2.1/Razor/Views/TandooriRecipe/Index.g.cshtml.cs
 /Users/abhi/Documents/dotNetWeb/TandooriRecipe/TandooriRecipe/obj/Debug/netcoreapp2.1/Razor/Views/TandooriRecipe/AddRecipe.g.cshtml.cs
+/Users/abhi/Documents/dotNetWeb/TandooriRecipe/TandooriRecipe/obj/Debug/netcoreapp2.1/Razor/Views/TandooriRecipe/DisplayRecipe.g.cshtml.cs

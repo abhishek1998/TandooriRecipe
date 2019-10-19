@@ -1,0 +1,18 @@
+@model TandooriRecipe.Models.RecipeModel
+
+@{
+    Layout = "_Layout";
+}
+
+@if (Model != null)
+{
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <p class="display-2">@Model.Name</p>
+            <p class="display-3">@Model.Author @Model.TimeRequired</p>
+            <p class="lead">@Model.Ingredients</p>
+            <p class="lead">@Model.Directions</p>
+        </div>
+    </div>
+}
+

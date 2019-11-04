@@ -8,9 +8,14 @@
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
+          <e p="RecipeController.cs" t="Include" />
           <e p="TandooriRecipeController.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
+          <e p="ApplicationDbContext.cs" t="Include" />
+          <e p="EfRecipeRepo.cs" t="Include" />
+          <e p="FakeRecipeRepository.cs" t="Include" />
+          <e p="IRecipeRepo.cs" t="Include" />
           <e p="RecipeModel.cs" t="Include" />
           <e p="RecipeRepository.cs" t="Include" />
         </e>

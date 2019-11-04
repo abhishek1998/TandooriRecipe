@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{557EFB73-5B3B-4F10-A3BB-6D3545C50C88}|Default">
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="TandooriRecipe" expanded="True">
+            <Node name="TandooriRecipe" expanded="True">
+              <Node name="wwwroot" expanded="True" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.TandooriRecipe PreferredExecutionTarget="/Applications/Firefox.app" />
+</Properties>

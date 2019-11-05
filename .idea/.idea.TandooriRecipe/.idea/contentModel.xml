@@ -13,6 +13,11 @@
           <e p="RecipeController.cs" t="Include" />
           <e p="TandooriRecipeController.cs" t="Include" />
         </e>
+        <e p="Migrations" t="Include">
+          <e p="20191105155846_Initial.cs" t="Include" />
+          <e p="20191105155846_Initial.Designer.cs" t="Include" />
+          <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
+        </e>
         <e p="Models" t="Include">
           <e p="ApplicationDbContext.cs" t="Include" />
           <e p="EfRecipeRepo.cs" t="Include" />

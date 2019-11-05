@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$PROJECT_DIR$" t="IncludeFlat">
+    <e p="C:\Users\300985889\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\300985889\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_TandooriRecipe.618960135.00" t="ExcludeRecursive" />
+    <e p="C:\Users\300985889\RiderProjects\WebAssignmentWorking" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="TandooriRecipe" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
@@ -15,7 +17,9 @@
           <e p="ApplicationDbContext.cs" t="Include" />
           <e p="EfRecipeRepo.cs" t="Include" />
           <e p="FakeRecipeRepository.cs" t="Include" />
+          <e p="Ingredient.cs" t="Include" />
           <e p="IRecipeRepo.cs" t="Include" />
+          <e p="RecipeIngredient.cs" t="Include" />
           <e p="RecipeModel.cs" t="Include" />
           <e p="RecipeRepository.cs" t="Include" />
         </e>
@@ -118,7 +122,5 @@
       </e>
       <e p="TandooriRecipe.sln" t="IncludeFlat" />
     </e>
-    <e p="$USER_HOME$/Library/Caches/Rider2019.2/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/Library/Caches/Rider2019.2/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_TandooriRecipe.1077014822.00" t="ExcludeRecursive" />
   </component>
 </project>

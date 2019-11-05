@@ -27,7 +27,7 @@ namespace TandooriRecipe
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration["Data:TandooriRecipe:ConnectionString"]));
+                options.UseSqlServer(Configuration["Data:TandooriRecipeApp:ConnectionString"]));
             services.AddTransient<IRecipeRepo, FakeRecipeRepository>();
             services.AddMvc();
         }

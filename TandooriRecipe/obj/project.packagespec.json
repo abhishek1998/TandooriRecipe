@@ -1,18 +1,19 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/Users/abhi/Documents/dotNetWeb/TandooriRecipe/TandooriRecipe/TandooriRecipe.csproj",
+    "projectUniqueName": "C:\\Users\\300985889\\RiderProjects\\WebAssignmentWorking\\TandooriRecipe\\TandooriRecipe.csproj",
     "projectName": "TandooriRecipe",
-    "projectPath": "/Users/abhi/Documents/dotNetWeb/TandooriRecipe/TandooriRecipe/TandooriRecipe.csproj",
-    "outputPath": "/Users/abhi/Documents/dotNetWeb/TandooriRecipe/TandooriRecipe/obj/",
+    "projectPath": "C:\\Users\\300985889\\RiderProjects\\WebAssignmentWorking\\TandooriRecipe\\TandooriRecipe.csproj",
+    "outputPath": "C:\\Users\\300985889\\RiderProjects\\WebAssignmentWorking\\TandooriRecipe\\obj\\",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
-      "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+      "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
     ],
     "originalTargetFrameworks": [
       "netcoreapp2.1"
     ],
     "sources": {
+      "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
       "https://api.nuget.org/v3/index.json": {}
     },
     "frameworks": {
@@ -52,12 +53,7 @@
         }
       },
       "imports": [
-        "net461",
-        "net462",
-        "net47",
-        "net471",
-        "net472",
-        "net48"
+        "net461"
       ],
       "assetTargetFallback": true,
       "warn": true

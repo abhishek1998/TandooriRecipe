@@ -5,13 +5,9 @@ using System.Reflection.Metadata.Ecma335;
 
 namespace TandooriRecipe.Models
 {
-    public class Ingredient
-    {
-        public string Name  { get; set; }
-        public int Quantity{ get; set; }
-    }
     public class RecipeModel 
     {
+        public string RecipeModelID { get; set; }
         public string Name { get; set; }
         public string Author { get; set; }
         public string Desciption { get; set; }

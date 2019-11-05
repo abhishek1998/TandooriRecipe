@@ -28,7 +28,7 @@ namespace TandooriRecipe
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration["Data:TandooriRecipeApp:ConnectionString"]));
-            services.AddTransient<IRecipeRepo, FakeRecipeRepository>();
+            services.AddTransient<IRecipeRepo, EfRecipeRepo>();
             services.AddMvc();
         }
 
@@ -48,6 +48,7 @@ namespace TandooriRecipe
                     name: "AddRecipe",
                     template: "{controller=TandooriRecipe}/{action=AddRecipe}/{id?}");
             });
+            SeedData.EnsurePopulated(app);
         }
     }
 }

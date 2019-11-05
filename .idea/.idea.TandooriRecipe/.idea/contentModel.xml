@@ -16,6 +16,8 @@
         <e p="Migrations" t="Include">
           <e p="20191105155846_Initial.cs" t="Include" />
           <e p="20191105155846_Initial.Designer.cs" t="Include" />
+          <e p="20191105163737_InitialDataSeed.cs" t="Include" />
+          <e p="20191105163737_InitialDataSeed.Designer.cs" t="Include" />
           <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -24,9 +26,9 @@
           <e p="FakeRecipeRepository.cs" t="Include" />
           <e p="Ingredient.cs" t="Include" />
           <e p="IRecipeRepo.cs" t="Include" />
-          <e p="RecipeIngredient.cs" t="Include" />
           <e p="RecipeModel.cs" t="Include" />
           <e p="RecipeRepository.cs" t="Include" />
+          <e p="SeedData.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">

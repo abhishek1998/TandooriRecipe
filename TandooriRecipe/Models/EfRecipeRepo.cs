@@ -2,7 +2,7 @@ using System.Linq;
 
 namespace TandooriRecipe.Models
 {
-    public class EfRecipeRepo
+    public class EfRecipeRepo : IRecipeRepo
     {
         private readonly ApplicationDbContext context;
         public EfRecipeRepo(ApplicationDbContext ctx)

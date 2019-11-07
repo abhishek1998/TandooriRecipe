@@ -5,5 +5,9 @@ namespace TandooriRecipe.Controllers
     public class RecipeController : Controller
     {
         // GET
+//        public IActionResult Index()
+//        {
+//            return View();
+//        }
     }
 }

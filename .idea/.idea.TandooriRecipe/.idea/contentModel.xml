@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\300985889\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\300985889\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_TandooriRecipe.618960135.00" t="ExcludeRecursive" />
-    <e p="C:\Users\300985889\RiderProjects\WebAssignmentWorking" t="IncludeFlat">
+    <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="TandooriRecipe" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
@@ -129,5 +127,7 @@
       </e>
       <e p="TandooriRecipe.sln" t="IncludeFlat" />
     </e>
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/extResources" t="IncludeRecursive" />
+    <e p="$USER_HOME$/Library/Caches/Rider2019.2/resharper-host/local/Transient/ReSharperHost/v192/SolutionCaches/_TandooriRecipe.1077014822.00" t="ExcludeRecursive" />
   </component>
 </project>

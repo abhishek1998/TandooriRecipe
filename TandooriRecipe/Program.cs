@@ -23,6 +23,5 @@ namespace TandooriRecipe
                 .UseDefaultServiceProvider(options =>
                     options.ValidateScopes = false)
                 .Build();
-
     }
 }

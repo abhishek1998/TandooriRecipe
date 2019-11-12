@@ -16,6 +16,8 @@
           <e p="20191105155846_Initial.Designer.cs" t="Include" />
           <e p="20191105163737_InitialDataSeed.cs" t="Include" />
           <e p="20191105163737_InitialDataSeed.Designer.cs" t="Include" />
+          <e p="20191107223815_Thurday.cs" t="Include" />
+          <e p="20191107223815_Thurday.Designer.cs" t="Include" />
           <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">

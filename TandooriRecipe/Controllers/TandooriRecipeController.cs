@@ -1,5 +1,4 @@
-﻿using System.Net;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using TandooriRecipe.Models;
 
 namespace TandooriRecipe.Controllers
@@ -24,7 +23,6 @@ namespace TandooriRecipe.Controllers
             return View("Index",RecipeRepository.Response);
         }
 
-//        [HttpGet]
         public IActionResult DisplayRecipe(int id)
         {
             foreach (var item in RecipeRepository.Response)

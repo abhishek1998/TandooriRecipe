@@ -44,11 +44,25 @@
           "target": "Package",
           "version": "[2.1.2, )"
         },
+        "Microsoft.EntityFrameworkCore.Design": {
+          "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[3.0.0, )"
+        },
         "Microsoft.NETCore.App": {
           "suppressParent": "All",
           "target": "Package",
           "version": "[2.1.0, )",
           "autoReferenced": true
+        },
+        "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+          "target": "Package",
+          "version": "[3.0.0, )"
+        },
+        "sqlite": {
+          "target": "Package",
+          "version": "[3.13.0, )"
         }
       },
       "imports": [

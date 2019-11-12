@@ -9,7 +9,6 @@
         font-size: 14px;
     }
 
-
     p {
         margin-bottom: 0.8em;
     }
@@ -41,7 +40,6 @@
     .h-48 {
         height: 18rem;
     }
-
 
     .menu {
         background: #5bc995;
@@ -90,6 +88,7 @@
         transition: all 0.15s linear;
         cursor: pointer;
     }
+    
     footer {
         align-content: center;
         margin-top: 330px;
@@ -121,20 +120,24 @@
         margin: 20px auto;
         width: 350px;
     }
+    
     .front {
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: repeat(4, 1fr);
     }
+    
     .front .blue {
         background-color: #4cc9c8;
         grid-column: 8 / span 5;
         grid-row: 1 / span 4;
     }
+    
     .front .yellow {
         background-color: #f1ef1c;
         grid-column: 1 / span 7;
         grid-row: 1 / span 4;
     }
+    
     .front .pink {
         background-color: #fa001a;
         -webkit-clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
@@ -144,10 +147,10 @@
         position: relative;
         z-index: 2;
     }
+    
     .front .dots {
-        background: radial-gradient(#fa001a 20%, transparent 19%), radial-gradient(#fa001a 20%, transparent 19%), transparent;
         background-size: 6px 6px;
-        background-position: 0 0, 3px 3px;
+        background: transparent radial-gradient(#fa001a 20%, transparent 19%) , radial-gradient(#fa001a 20%, transparent 19%) 0 0, 3px 3px;
         grid-column: 1 / span 12;
         grid-row: 3 / span 2;
         margin: 0 0 15px 20px;
@@ -221,5 +224,4 @@
         grid-column: 8 / span 5;
         grid-row: 10 / span 3;
     }
-
 }

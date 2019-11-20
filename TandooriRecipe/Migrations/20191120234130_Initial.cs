@@ -2,7 +2,7 @@
 
 namespace TandooriRecipe.Migrations
 {
-    public partial class Thurday : Migration
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

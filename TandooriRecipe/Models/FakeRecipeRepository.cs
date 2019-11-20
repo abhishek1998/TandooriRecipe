@@ -12,6 +12,18 @@ namespace TandooriRecipe.Models
                 Name = "Kadhai Kofta",
                 Author = "Abhishek",
                 Desciption = "Spicy Dish with potatoes"
+            },
+            new RecipeModel
+            {
+                Name = "Kadhai Kofta",
+                Author = "Abhishek",
+                Desciption = "Spicy Dish with potatoes"
+            },
+            new RecipeModel
+            {
+                Name = "Kadhai Kofta",
+                Author = "Abhishek",
+                Desciption = "Spicy Dish with potatoes"
             }
         }.AsQueryable<RecipeModel>();
     }

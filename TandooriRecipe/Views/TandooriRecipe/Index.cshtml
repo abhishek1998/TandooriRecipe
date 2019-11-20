@@ -1,20 +1,11 @@
-﻿@model IEnumerable<TandooriRecipe.Models.RecipeModel>
-
+﻿
 @{
 	ViewData["Title"] = "Tandoori Recipe Home";
 	Layout="_Layout";
 }
 
-            
-@foreach (TandooriRecipe.Models.RecipeModel item in @Model)
-{
-    <div class="jumbotron jumbotron-fluid">
-        <div class="container">
-            <p class="display-2">@item.Name</p>
-            <p class="display-3">@item.Author @item.TimeRequired</p>
-            <p class="lead">@item.Ingredients</p>
-            <p class="lead">@item.Directions</p>
-            <a asp-action="DisplayRecipe" asp-route-id="@item.RecipeId"><p class="lead"> See Full Recipe </p> </a>
-        </div>
-    </div>
-}
+
+<div class="container">
+	tandoori recipe index page 
+</div>
+

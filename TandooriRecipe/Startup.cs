@@ -19,10 +19,7 @@ namespace TandooriRecipe
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration["Data:TandooriRecipeApp:ConnectionString"])); 
-            services.AddTransient<IRecipeRepo, EfRecipeRepo>();
+            services.AddTransient<IRecipeRepo, FakeRecipeRepository>();
             services.AddMvc();
         }
 
@@ -36,13 +33,13 @@ namespace TandooriRecipe
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=TandooriRecipe}/{action=Index}/{id?}");
+                    template: "{controller=TandooriRecipe}/{action=List}/{id?}");
                 
                 routes.MapRoute(
                     name: "AddRecipe",
                     template: "{controller=TandooriRecipe}/{action=AddRecipe}/{id?}");
             });
-            SeedData.EnsurePopulated(app);
+//            SeedData.EnsurePopulated(app);
         }
     }
 }

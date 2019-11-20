@@ -5,9 +5,21 @@ namespace TandooriRecipe.Controllers
 {
     public class TandooriRecipeController : Controller
     {
+        private IRecipeRepo repo;
+
+        public TandooriRecipeController(IRecipeRepo repository)
+        {
+            repo = repository;
+        }
+        
         public IActionResult Index()
         {
-            return View(RecipeRepository.Response );
+            return View();
+        }
+
+        public IActionResult List()
+        {
+            return View(repo.Recipes);
         }
 
         [HttpGet]

@@ -4,6 +4,9 @@ namespace TandooriRecipe.Models
 {
     public interface IRecipeRepo
     {
-        IQueryable<RecipeModel> Recipes { get; } 
+        IQueryable<RecipeModel> Recipes { get; }
+
+        void SaveRecipe(RecipeModel recipe);
+        RecipeModel DeleteRecipe(int ID);
     }
 }

@@ -90,3 +90,5 @@ C:/Users/300985889/RiderProjects/WebAssignmentWorking/TandooriRecipe/obj/Debug/n
 /Users/abhi/RiderProjects/WebAssignmentWorking/TandooriRecipe/obj/Debug/netcoreapp2.1/TandooriRecipe.dll
 /Users/abhi/RiderProjects/WebAssignmentWorking/TandooriRecipe/obj/Debug/netcoreapp2.1/TandooriRecipe.pdb
 /Users/abhi/RiderProjects/WebAssignmentWorking/TandooriRecipe/obj/Debug/netcoreapp2.1/TandooriRecipe.csproj.CopyComplete
+/Users/abhi/RiderProjects/WebAssignmentWorking/TandooriRecipe/obj/Debug/netcoreapp2.1/Razor/Views/Account/Login.cshtml.g.cs
+/Users/abhi/RiderProjects/WebAssignmentWorking/TandooriRecipe/obj/Debug/netcoreapp2.1/Razor/Views/Shared/AdminLayout.cshtml.g.cs

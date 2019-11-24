@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -19,10 +20,13 @@ namespace TandooriRecipe
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(
-                    Configuration["Data:TandooriRecipeApp:ConnectionString"])); 
-            services.AddTransient<IRecipeRepo, EfRecipeRepo>();
+           services.AddDbContext<ApplicationDbContext>(options =>
+               options.UseSqlServer(
+                   Configuration["Data:TandooriRecipeApp:ConnectionString"])); 
+            services.AddTransient<IRecipeRepo, FakeRecipeRepository>();
+            services.AddIdentity<User, IdentityRole>()
+                .AddEntityFrameworkStores<AppIdentityDbContext>()
+                .AddDefaultTokenProviders();
             services.AddMvc();
         }
 
@@ -31,6 +35,8 @@ namespace TandooriRecipe
         {
             app.UseDeveloperExceptionPage();
             app.UseStaticFiles();
+
+            app.UseAuthentication();
 
             app.UseMvc(routes =>
             {

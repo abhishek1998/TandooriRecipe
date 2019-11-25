@@ -10,7 +10,7 @@ namespace TandooriRecipe.Models
         public string RecipeModelID { get; set; }
         public string Name { get; set; }
         public string Author { get; set; }
-        public string Desciption { get; set; }
+        public string Description { get; set; }
         public int RecipeId { get; set; }
         public List<Ingredient> Ingredients { get; set; }
         public String Directions { get; set; }

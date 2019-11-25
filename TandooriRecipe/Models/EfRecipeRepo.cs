@@ -10,32 +10,41 @@ namespace TandooriRecipe.Models {
             context = ctx;
         }
 
-        public IQueryable<Product> Recipes => context.Recipes;
+        public IQueryable<RecipeModel> Recipes => context.Recipes;
 
         public void Save(RecipeModel recipe) {
-            if (recipe.ProductID == 0) {
-                context.Products.Add(recipe);
+            if (recipe.RecipeId == 0) {
+                context.Recipes.Add(recipe);
             } else {
-                Product dbEntry = context.Products
-                    .FirstOrDefault(p => p.RecipeID== recipe.RecipeId);
+                RecipeModel dbEntry = context.Recipes
+                    .FirstOrDefault(r => r.RecipeId == recipe.RecipeId);
                 if (dbEntry != null) {
                     dbEntry.Name = recipe.Name;
                     dbEntry.Description = recipe.Description;
-                    dbEntry.Price = recipe.Price;
-                    dbEntry.Category = recipe.Category;
+                    //dbEntry.Price = recipe.Price;
+                    dbEntry.Author = recipe.Author;
                 }
             }
             context.SaveChanges();
         }
 
-        public Product DeleteProduct(int productID) {
-            Product dbEntry = context.Products
-                .FirstOrDefault(p => p.ProductID == productID);
+        public RecipeModel DeleteProduct(int RecipeId) {
+            RecipeModel dbEntry = context.Recipes
+                .FirstOrDefault(r => r.RecipeId == RecipeId);
             if (dbEntry != null) {
-                context.Products.Remove(dbEntry);
+                context.Recipes.Remove(dbEntry);
                 context.SaveChanges();
             }
             return dbEntry;
         }
+                public void SaveRecipe(RecipeModel recipe)
+                {
+                    throw new System.NotImplementedException();
+                }
+        
+                public RecipeModel DeleteRecipe(int ID)
+                {
+                    throw new System.NotImplementedException();
+                }
     }
 }

@@ -23,7 +23,7 @@ namespace TandooriRecipe
            services.AddDbContext<ApplicationDbContext>(options =>
                options.UseSqlServer(
                    Configuration["Data:TandooriRecipeApp:ConnectionString"])); 
-            services.AddTransient<IRecipeRepo, FakeRecipeRepository>();
+            services.AddTransient<IRecipeRepo, EFRecipeRepository>();
             services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<AppIdentityDbContext>()
                 .AddDefaultTokenProviders();

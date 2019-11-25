@@ -46,7 +46,7 @@ namespace TandooriRecipe.Models
 
         public RecipeModel DeleteRecipe(int ID)
         {
-            RecipeModel dbEntry = context.
+            RecipeModel dbEntry = context
                 .FirstOrDefault(p => p.RecipeId == productID);
             if (dbEntry != null) {
                 context.Products.Remove(dbEntry);

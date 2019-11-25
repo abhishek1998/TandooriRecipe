@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\rohit\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\rohit\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_TandooriRecipe.-972390777.00" t="ExcludeRecursive" />
-    <e p="C:\Users\rohit\RiderProjects\WebAssignmentWorking" t="IncludeFlat">
+    <e p="C:\Users\300985889\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\300985889\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_TandooriRecipe.509108861.00" t="ExcludeRecursive" />
+    <e p="C:\Users\300985889\Desktop\wbe" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="TandooriRecipe" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
@@ -15,8 +15,15 @@
           <e p="TandooriRecipeController.cs" t="Include" />
         </e>
         <e p="Migrations" t="Include">
-          <e p="20191120234130_Initial.cs" t="Include" />
-          <e p="20191120234130_Initial.Designer.cs" t="Include" />
+          <e p="20191125165131_Initial.cs" t="Include" />
+          <e p="20191125165131_Initial.Designer.cs" t="Include" />
+          <e p="20191125170531_Initial2.cs" t="Include" />
+          <e p="20191125170531_Initial2.Designer.cs" t="Include" />
+          <e p="AppIdentityDb" t="Include">
+            <e p="20191125161212_Initial.cs" t="Include" />
+            <e p="20191125161212_Initial.Designer.cs" t="Include" />
+            <e p="AppIdentityDbContextModelSnapshot.cs" t="Include" />
+          </e>
           <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
@@ -24,7 +31,6 @@
           <e p="ApplicationDbContext.cs" t="Include" />
           <e p="EfRecipeRepo.cs" t="Include" />
           <e p="IdentitySeedData.cs" t="Include" />
-          <e p="Ingredient.cs" t="Include" />
           <e p="IRecipeRepo.cs" t="Include" />
           <e p="RecipeModel.cs" t="Include" />
           <e p="RecipeRepository.cs" t="Include" />

@@ -9,7 +9,7 @@ using TandooriRecipe.Models;
 namespace TandooriRecipe.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20191120234130_Initial")]
+    [Migration("20191125165131_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,24 +20,6 @@ namespace TandooriRecipe.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("TandooriRecipe.Models.Ingredient", b =>
-                {
-                    b.Property<string>("IngredientID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Name");
-
-                    b.Property<double>("Quantity");
-
-                    b.Property<string>("RecipeModelID");
-
-                    b.HasKey("IngredientID");
-
-                    b.HasIndex("RecipeModelID");
-
-                    b.ToTable("Ingredient");
-                });
-
             modelBuilder.Entity("TandooriRecipe.Models.RecipeModel", b =>
                 {
                     b.Property<string>("RecipeModelID")
@@ -45,9 +27,11 @@ namespace TandooriRecipe.Migrations
 
                     b.Property<string>("Author");
 
-                    b.Property<string>("Desciption");
+                    b.Property<string>("Description");
 
                     b.Property<string>("Directions");
+
+                    b.Property<string>("Ingredients");
 
                     b.Property<string>("Name");
 
@@ -58,13 +42,6 @@ namespace TandooriRecipe.Migrations
                     b.HasKey("RecipeModelID");
 
                     b.ToTable("Recipes");
-                });
-
-            modelBuilder.Entity("TandooriRecipe.Models.Ingredient", b =>
-                {
-                    b.HasOne("TandooriRecipe.Models.RecipeModel")
-                        .WithMany("Ingredients")
-                        .HasForeignKey("RecipeModelID");
                 });
 #pragma warning restore 612, 618
         }

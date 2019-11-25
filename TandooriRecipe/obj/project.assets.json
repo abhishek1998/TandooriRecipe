@@ -11936,11 +11936,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\300985889\\source\\WebAssignmentWorking\\TandooriRecipe\\TandooriRecipe.csproj",
+      "projectUniqueName": "C:\\Users\\300985889\\Desktop\\wbe\\TandooriRecipe\\TandooriRecipe.csproj",
       "projectName": "TandooriRecipe",
-      "projectPath": "C:\\Users\\300985889\\source\\WebAssignmentWorking\\TandooriRecipe\\TandooriRecipe.csproj",
+      "projectPath": "C:\\Users\\300985889\\Desktop\\wbe\\TandooriRecipe\\TandooriRecipe.csproj",
       "packagesPath": "C:\\Users\\300985889\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\300985889\\source\\WebAssignmentWorking\\TandooriRecipe\\obj\\",
+      "outputPath": "C:\\Users\\300985889\\Desktop\\wbe\\TandooriRecipe\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

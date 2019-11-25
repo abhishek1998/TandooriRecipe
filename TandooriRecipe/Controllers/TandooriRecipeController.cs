@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using TandooriRecipe.Models;
 
 namespace TandooriRecipe.Controllers
@@ -22,12 +23,14 @@ namespace TandooriRecipe.Controllers
             return View(repo.Recipes);
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult AddRecipe()
         {
             return View();
         }
-        
+
+        [Authorize]
         [HttpPost]
         public IActionResult AddRecipe(RecipeModel newRecipe)
         {

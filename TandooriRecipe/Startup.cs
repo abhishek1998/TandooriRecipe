@@ -22,7 +22,11 @@ namespace TandooriRecipe
         {
            services.AddDbContext<ApplicationDbContext>(options =>
                options.UseSqlServer(
-                   Configuration["Data:TandooriRecipeApp:ConnectionString"])); 
+                   Configuration["Data:TandooriRecipeApp:ConnectionString"]));
+            services.AddDbContext<AppIdentityDbContext>(options =>
+             options.UseSqlServer(
+                 Configuration["Data:Identity:ConnectionString"]));
+
             services.AddTransient<IRecipeRepo, EFRecipeRepository>();
             services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<AppIdentityDbContext>()
@@ -43,12 +47,13 @@ namespace TandooriRecipe
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=TandooriRecipe}/{action=List}/{id?}");
-                
+
                 routes.MapRoute(
                     name: "AddRecipe",
                     template: "{controller=TandooriRecipe}/{action=AddRecipe}/{id?}");
             });
-//            SeedData.EnsurePopulated(app);
+            SeedData.EnsurePopulated(app);
+            IdentitySeedData.EnsurePopulated( app);
         }
     }
 }

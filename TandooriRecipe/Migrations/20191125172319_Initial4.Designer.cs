@@ -9,8 +9,8 @@ using TandooriRecipe.Models;
 namespace TandooriRecipe.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20191125165131_Initial")]
-    partial class Initial
+    [Migration("20191125172319_Initial4")]
+    partial class Initial4
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -22,8 +22,9 @@ namespace TandooriRecipe.Migrations
 
             modelBuilder.Entity("TandooriRecipe.Models.RecipeModel", b =>
                 {
-                    b.Property<string>("RecipeModelID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<int>("RecipeId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Author");
 
@@ -31,15 +32,9 @@ namespace TandooriRecipe.Migrations
 
                     b.Property<string>("Directions");
 
-                    b.Property<string>("Ingredients");
-
                     b.Property<string>("Name");
 
-                    b.Property<int>("RecipeId");
-
-                    b.Property<int>("TimeRequired");
-
-                    b.HasKey("RecipeModelID");
+                    b.HasKey("RecipeId");
 
                     b.ToTable("Recipes");
                 });

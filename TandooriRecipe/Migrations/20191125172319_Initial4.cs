@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace TandooriRecipe.Migrations
 {
-    public partial class Initial2 : Migration
+    public partial class Initial4 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -12,28 +12,20 @@ namespace TandooriRecipe.Migrations
                 table: "Recipes");
 
             migrationBuilder.DropColumn(
-                name: "RecipeModelID",
+                name: "Id",
                 table: "Recipes");
 
-            migrationBuilder.DropColumn(
-                name: "Ingredients",
-                table: "Recipes");
-
-            migrationBuilder.DropColumn(
-                name: "TimeRequired",
-                table: "Recipes");
-
-            migrationBuilder.AddColumn<int>(
-                name: "id",
+            migrationBuilder.AlterColumn<int>(
+                name: "RecipeId",
                 table: "Recipes",
                 nullable: false,
-                defaultValue: 0)
+                oldClrType: typeof(int))
                 .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             migrationBuilder.AddPrimaryKey(
                 name: "PK_Recipes",
                 table: "Recipes",
-                column: "id");
+                column: "RecipeId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -42,31 +34,24 @@ namespace TandooriRecipe.Migrations
                 name: "PK_Recipes",
                 table: "Recipes");
 
-            migrationBuilder.DropColumn(
-                name: "id",
-                table: "Recipes");
-
-            migrationBuilder.AddColumn<string>(
-                name: "RecipeModelID",
+            migrationBuilder.AlterColumn<int>(
+                name: "RecipeId",
                 table: "Recipes",
                 nullable: false,
-                defaultValue: "");
-
-            migrationBuilder.AddColumn<string>(
-                name: "Ingredients",
-                table: "Recipes",
-                nullable: true);
+                oldClrType: typeof(int))
+                .OldAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             migrationBuilder.AddColumn<int>(
-                name: "TimeRequired",
+                name: "Id",
                 table: "Recipes",
                 nullable: false,
-                defaultValue: 0);
+                defaultValue: 0)
+                .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             migrationBuilder.AddPrimaryKey(
                 name: "PK_Recipes",
                 table: "Recipes",
-                column: "RecipeModelID");
+                column: "Id");
         }
     }
 }

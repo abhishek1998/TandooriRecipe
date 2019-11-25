@@ -15,10 +15,8 @@
           <e p="TandooriRecipeController.cs" t="Include" />
         </e>
         <e p="Migrations" t="Include">
-          <e p="20191125165131_Initial.cs" t="Include" />
-          <e p="20191125165131_Initial.Designer.cs" t="Include" />
-          <e p="20191125170531_Initial2.cs" t="Include" />
-          <e p="20191125170531_Initial2.Designer.cs" t="Include" />
+          <e p="20191125172319_Initial4.cs" t="Include" />
+          <e p="20191125172319_Initial4.Designer.cs" t="Include" />
           <e p="AppIdentityDb" t="Include">
             <e p="20191125161212_Initial.cs" t="Include" />
             <e p="20191125161212_Initial.Designer.cs" t="Include" />

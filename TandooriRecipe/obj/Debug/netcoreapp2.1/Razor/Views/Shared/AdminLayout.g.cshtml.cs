@@ -62,12 +62,12 @@ using TandooriRecipe.Models;
             WriteLiteral("<!DOCTYPE html>\r\n<html>\r\n");
             EndContext();
             BeginContext(25, 579, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "de092bcbb62f4e24b5eb09b7e17f90e2", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("head", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "c1a88e16ac044aaa93aa7b6f9429e644", async() => {
                 BeginContext(31, 65, true);
                 WriteLiteral("\r\n    <meta name=\"viewport\" content=\"width=device-width\" />\r\n    ");
                 EndContext();
                 BeginContext(96, 77, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "22890f0eeb974ddca259788967f125ac", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("link", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "b9325c33007e4d439e7d1117292bae24", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_LinkTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.LinkTagHelper>();
@@ -123,7 +123,7 @@ using TandooriRecipe.Models;
             WriteLiteral("\r\n");
             EndContext();
             BeginContext(606, 412, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "46747480ff8543858e51c69cba80d838", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("body", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "981ca2a5404c45d1b7d0772d5e03fc70", async() => {
                 BeginContext(628, 68, true);
                 WriteLiteral("\r\n<div class=\"bg-info p-2 row\">\r\n    <div class=\"col\">\r\n        <h4>");
                 EndContext();
@@ -138,7 +138,7 @@ using TandooriRecipe.Models;
                 WriteLiteral("</h4>\r\n    </div>\r\n    <div class=\"col-2\">\r\n        ");
                 EndContext();
                 BeginContext(762, 102, false);
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8cba7b572ca346da98de06b756fc4fcb", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "e26626607c474bf18107427b420fdadf", async() => {
                     BeginContext(853, 7, true);
                     WriteLiteral("Log Out");
                     EndContext();

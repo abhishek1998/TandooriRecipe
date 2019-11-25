@@ -20,7 +20,7 @@ namespace TandooriRecipe.Migrations
 
             modelBuilder.Entity("TandooriRecipe.Models.RecipeModel", b =>
                 {
-                    b.Property<int>("id")
+                    b.Property<int>("RecipeId")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -32,9 +32,7 @@ namespace TandooriRecipe.Migrations
 
                     b.Property<string>("Name");
 
-                    b.Property<int>("RecipeId");
-
-                    b.HasKey("id");
+                    b.HasKey("RecipeId");
 
                     b.ToTable("Recipes");
                 });

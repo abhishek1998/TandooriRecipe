@@ -6,5 +6,7 @@ namespace TandooriRecipe.Models
     public class AppIdentityDbContext:IdentityDbContext<User>
     {
        public AppIdentityDbContext(DbContextOptions<AppIdentityDbContext> options) : base(options) {} 
+       
+       public DbSet<User> Users{ get; set; }
     }
 }

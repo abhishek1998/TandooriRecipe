@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\300985889\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\300985889\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_TandooriRecipe.509108861.00" t="ExcludeRecursive" />
-    <e p="C:\Users\300985889\Desktop\wbe" t="IncludeFlat">
+    <e p="C:\Users\300985889\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_TandooriRecipe.-1789044077.00" t="ExcludeRecursive" />
+    <e p="C:\Users\300985889\source\repos\abhishek1998\WebAssignmentWorking" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="TandooriRecipe" t="IncludeRecursive">
         <e p="appsettings.Development.json" t="Include" />
@@ -15,26 +15,18 @@
           <e p="TandooriRecipeController.cs" t="Include" />
         </e>
         <e p="Migrations" t="Include">
-          <e p="20191125172319_Initial4.cs" t="Include" />
-          <e p="20191125172319_Initial4.Designer.cs" t="Include" />
-          <e p="AppIdentityDb" t="Include">
-            <e p="20191125161212_Initial.cs" t="Include" />
-            <e p="20191125161212_Initial.Designer.cs" t="Include" />
-            <e p="AppIdentityDbContextModelSnapshot.cs" t="Include" />
-          </e>
+          <e p="20191125212232_Initial.cs" t="Include" />
+          <e p="20191125212232_Initial.Designer.cs" t="Include" />
           <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
-          <e p="AppIdentityDbContext.cs" t="Include" />
           <e p="ApplicationDbContext.cs" t="Include" />
           <e p="EfRecipeRepo.cs" t="Include" />
-          <e p="IdentitySeedData.cs" t="Include" />
           <e p="IRecipeRepo.cs" t="Include" />
           <e p="RecipeModel.cs" t="Include" />
           <e p="RecipeRepository.cs" t="Include" />
           <e p="SeedData.cs" t="Include" />
-          <e p="User.cs" t="Include" />
-          <e p="ViewModels" t="Include">
+          <e p="ViewsModel" t="Include">
             <e p="LoginModel.cs" t="Include" />
           </e>
         </e>
@@ -62,8 +54,8 @@
             <e p="Index.cshtml" t="Include" />
           </e>
           <e p="Shared" t="Include">
+            <e p="_AdminLayout.cshtml" t="Include" />
             <e p="_Layout.cshtml" t="Include" />
-            <e p="AdminLayout.cshtml" t="Include" />
           </e>
           <e p="TandooriRecipe" t="Include">
             <e p="About.cshtml" t="Include" />

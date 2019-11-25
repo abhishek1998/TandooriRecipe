@@ -12,7 +12,8 @@ namespace TandooriRecipe.Models {
 
         public IQueryable<RecipeModel> Recipes => context.Recipes;
 
-        public void Save(RecipeModel recipe) {
+        public void SaveRecipe(RecipeModel recipe)
+        {
             if (recipe.RecipeId == 0) {
                 context.Recipes.Add(recipe);
             } else {
@@ -20,9 +21,10 @@ namespace TandooriRecipe.Models {
                     .FirstOrDefault(r => r.RecipeId == recipe.RecipeId);
                 if (dbEntry != null) {
                     dbEntry.Name = recipe.Name;
+                    dbEntry.RecipeId = recipe.RecipeId;
                     dbEntry.Description = recipe.Description;
-                    //dbEntry.Price = recipe.Price;
                     dbEntry.Author = recipe.Author;
+                    dbEntry.Directions = recipe.Directions;
                 }
             }
             context.SaveChanges();
@@ -37,14 +39,5 @@ namespace TandooriRecipe.Models {
             }
             return dbEntry;
         }
-                public void SaveRecipe(RecipeModel recipe)
-                {
-                    throw new System.NotImplementedException();
-                }
-        
-                public RecipeModel DeleteRecipe(int ID)
-                {
-                    throw new System.NotImplementedException();
-                }
     }
 }

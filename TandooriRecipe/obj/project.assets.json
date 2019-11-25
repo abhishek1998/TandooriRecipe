@@ -5,8 +5,8 @@
       "EntityFramework/6.4.0-preview2-19525-03": {
         "type": "package",
         "build": {
-          "build/EntityFramework.props": {},
-          "build/EntityFramework.targets": {}
+          "buildTransitive/EntityFramework.props": {},
+          "buildTransitive/EntityFramework.targets": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -11936,11 +11936,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\300985889\\Desktop\\wbe\\TandooriRecipe\\TandooriRecipe.csproj",
+      "projectUniqueName": "C:\\Users\\300985889\\source\\repos\\abhishek1998\\WebAssignmentWorking\\TandooriRecipe\\TandooriRecipe.csproj",
       "projectName": "TandooriRecipe",
-      "projectPath": "C:\\Users\\300985889\\Desktop\\wbe\\TandooriRecipe\\TandooriRecipe.csproj",
+      "projectPath": "C:\\Users\\300985889\\source\\repos\\abhishek1998\\WebAssignmentWorking\\TandooriRecipe\\TandooriRecipe.csproj",
       "packagesPath": "C:\\Users\\300985889\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\300985889\\Desktop\\wbe\\TandooriRecipe\\obj\\",
+      "outputPath": "C:\\Users\\300985889\\source\\repos\\abhishek1998\\WebAssignmentWorking\\TandooriRecipe\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -11986,12 +11986,13 @@
             "version": "[2.1.2, )"
           },
           "Microsoft.EntityFrameworkCore.Design": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
             "target": "Package",
             "version": "[3.0.0, )"
           },
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true
@@ -12006,7 +12007,12 @@
           }
         },
         "imports": [
-          "net461"
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true

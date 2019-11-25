@@ -1,22 +1,21 @@
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using TandooriRecipe.Models.ViewModels;
-
+using TandooriRecipe.Models.ViewsModel;
 
 namespace TandooriRecipe.Controllers
 {
     [Authorize]
     public class AccountController : Controller
     {
-        private UserManager<IdentityUser> userManager;
-        private SignInManager<IdentityUser> signInManager;
+        private UserManager<IdentityUser> _userManager;
+        private SignInManager<IdentityUser> _signInManager;
 
-        public AccountController(UserManager<IdentityUser> userMgr, SignInManager<IdentityUser> signInMgr)
+        public AccountController(UserManager<IdentityUser> userMgnr, SignInManager<IdentityUser> signInMngr)
         {
-            userManager = userMgr;
-            signInManager = signInMgr;
+            _userManager = userMgnr;
+            _signInManager = signInMngr;
         }
 
         [AllowAnonymous]
@@ -24,36 +23,29 @@ namespace TandooriRecipe.Controllers
         {
             return View(new LoginModel
             {
-                ReturnUrl = returnUrl
+                ReturnURL = returnUrl
             });
         }
 
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login(LoginModel loginModel)
+        public async Task<IActionResult> Login(LoginModel login)
         {
             if (ModelState.IsValid)
             {
-                IdentityUser user = await userManager.FindByNameAsync(loginModel.Name);
+                IdentityUser user = await _userManager.FindByNameAsync(login.Name);
                 if (user != null)
                 {
-                    await signInManager.SignOutAsync();
-                    if ((await signInManager.PasswordSignInAsync(user, loginModel.Password, false, false)).Succeeded)
+                    await _signInManager.SignOutAsync();
+                    if ((await _signInManager.PasswordSignInAsync(user, login.Password, false, false)).Succeeded)
                     {
-                        return Redirect(loginModel?.ReturnUrl ?? "/Admin/Index");
+                        return Redirect(login?.ReturnURL ?? "/Admin/Index");
                     }
                 }
             }
-
             ModelState.AddModelError("", "Invalid name or password");
-            return View(loginModel);
-        }
-
-        public async Task<RedirectResult> Logout(string returnUrl = "/")
-        {
-            await signInManager.SignOutAsync();
-            return Redirect(returnUrl);
+            return View(login);
         }
     }
 }

@@ -30,7 +30,7 @@ namespace TandooriRecipe.Models {
             context.SaveChanges();
         }
 
-        public RecipeModel DeleteProduct(int RecipeId) {
+        public RecipeModel DeleteRecipe(int RecipeId) {
             RecipeModel dbEntry = context.Recipes
                 .FirstOrDefault(r => r.RecipeId == RecipeId);
             if (dbEntry != null) {

@@ -23,14 +23,15 @@ namespace TandooriRecipe
            services.AddDbContext<ApplicationDbContext>(options =>
                options.UseSqlServer(
                    Configuration["Data:TandooriRecipeApp:ConnectionString"]));
-            //services.AddDbContext<AppIdentityDbContext>(options =>
-            // options.UseSqlServer(
-             //    Configuration["Data:Identity:ConnectionString"]));
+            services.AddDbContext<AppIdentityDBContext>(options =>
+             options.UseSqlServer(
+                 Configuration["Data:TandooriRecipeIdentity:ConnectionString"]));
+            services.AddIdentity<AppUser, IdentityRole>()
+                .AddEntityFrameworkStores<AppIdentityDBContext>()
+                .AddDefaultTokenProviders();
+
 
             services.AddTransient<IRecipeRepo, EFRecipeRepository>();
-            //services.AddIdentity<User, IdentityRole>()
-             //   .AddEntityFrameworkStores<AppIdentityDbContext>()
-               // .AddDefaultTokenProviders();
             services.AddMvc();
         }
 

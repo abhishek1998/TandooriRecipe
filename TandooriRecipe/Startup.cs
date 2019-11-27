@@ -53,7 +53,7 @@ namespace TandooriRecipe
                     name: "AddRecipe",
                     template: "{controller=TandooriRecipe}/{action=AddRecipe}/{id?}");
             });
-            SeedData.EnsurePopulated(app);
+//            SeedData.EnsurePopulated(app);
 //            IdentitySeedData.EnsurePopulated( app);
         }
     }

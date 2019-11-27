@@ -28,9 +28,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Content Update="Views\Account\Login - Copy.cshtml">
-        <Pack>$(IncludeRazorContentInPack)</Pack>
-      </Content>
       <Content Update="Views\Admin\Create.cshtml">
         <Pack>$(IncludeRazorContentInPack)</Pack>
       </Content>

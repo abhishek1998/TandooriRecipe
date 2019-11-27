@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
@@ -8,11 +9,10 @@ namespace TandooriRecipe.Models
 {
     public class SeedData
     {
-        public static void EnsurePopulated(IApplicationBuilder app)
+        public static void EnsurePopulated(IServiceProvider services)
         {
-            ApplicationDbContext context = app.ApplicationServices
-                .GetRequiredService<ApplicationDbContext>();
-            //context.Database.Migrate();
+            ApplicationDbContext context = services.GetRequiredService<ApplicationDbContext>();
+            context.Database.Migrate();
             if (!context.Recipes.Any())
             {
                 context.Recipes.AddRange(

@@ -1,0 +1,28 @@
+@model TandooriRecipe.Models.RecipeModel
+@{
+    ViewBag.Title = "Edit Product";
+    Layout = "_AdminLayout";
+}
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="RecipeId" />
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <div><span asp-validation-for="Name" class="text-danger"></span></div>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <div><span asp-validation-for="Description" class="text-danger"></span></div>
+        <textarea asp-for="Description" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+        <label asp-for="Directions"></label>
+        <div><span asp-validation-for="Directions" class="text-danger"></span></div>
+        <input asp-for="Directions" class="form-control" />
+    </div>
+    <div class="text-center">
+        <button class="btn btn-primary" type="submit">Save</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </div>
+</form>

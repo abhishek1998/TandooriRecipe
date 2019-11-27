@@ -47,5 +47,12 @@ namespace TandooriRecipe.Controllers
             ModelState.AddModelError("", "Invalid name or password");
             return View(login);
         }
+
+
+        public async Task<RedirectResult> Logout(string returnurl = "/")
+        {
+            await _signInManager.SignOutAsync();
+            return Redirect(returnurl);
+        }
     }
 }

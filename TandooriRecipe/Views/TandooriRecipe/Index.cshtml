@@ -1,11 +1,30 @@
-﻿
+﻿@model IEnumerable<TandooriRecipe.Models.RecipeModel>
+
 @{
-	ViewData["Title"] = "Tandoori Recipe Home";
-	Layout="_Layout";
+    ViewData["Title"] = "Tandoori Recipe Home";
+    Layout="_Layout";
 }
 
 
-<div class="container">
-	tandoori recipe index page 
-</div>
-
+@foreach (TandooriRecipe.Models.RecipeModel item in Model) 
+{
+    <div class="pie-recipe__tips">
+        <h4> @item.Name  </h4>
+        <div class="pie-recipe__tips__text">
+            @item.Description
+        </div> <br> 
+        <a asp-action="DisplayRecipe" asp-route-id="@item.RecipeId"><p class="pie-recipe__number"> See Full Recipe </p> </a> 
+    </div>
+}
+            
+@* { *@
+@*     <div class="jumbotron jumbotron-fluid"> *@
+@*         <div class="container"> *@
+@*             <p class="display-2">@item.Name</p> *@
+@*             $1$ <p class="display-3">@item.Author @item.TimeRequired</p> #1# *@
+@*             $1$ <p class="lead">@item.Ingredients</p> #1# *@
+@*             <p class="lead">@item.Directions</p> *@
+@*             <a asp-action="DisplayRecipe" asp-route-id="@item.RecipeId"><p class="lead"> See Full Recipe </p> </a> *@
+@*         </div> *@
+@*     </div> *@
+@* } *@

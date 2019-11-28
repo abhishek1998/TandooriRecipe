@@ -9,9 +9,9 @@ namespace TandooriRecipe.Models
 {
     public class SeedData
     {
-        public static void EnsurePopulated(IServiceProvider services)
+        public static void EnsurePopulated(IApplicationBuilder services)
         {
-            ApplicationDbContext context = services.GetRequiredService<ApplicationDbContext>();
+            ApplicationDbContext context = services.ApplicationServices.GetRequiredService<ApplicationDbContext>();
             context.Database.Migrate();
             if (!context.Recipes.Any())
             {

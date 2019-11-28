@@ -15,7 +15,7 @@ namespace TandooriRecipe.Controllers
         
         public IActionResult Index()
         {
-            return View();
+            return View(repo.Recipes);
         }
 
         public IActionResult List()
@@ -40,7 +40,7 @@ namespace TandooriRecipe.Controllers
 
         public IActionResult DisplayRecipe(int id)
         {
-            foreach (var item in RecipeRepository.Response)
+            foreach (var item in repo.Recipes)
             {
                 if (id == item.RecipeId)
                 {

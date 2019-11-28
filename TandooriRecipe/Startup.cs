@@ -26,7 +26,7 @@ namespace TandooriRecipe
             services.AddDbContext<AppIdentityDBContext>(options =>
              options.UseSqlServer(
                  Configuration["Data:TandooriRecipeIdentity:ConnectionString"]));
-            services.AddIdentity<AppUser, IdentityRole>()
+            services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddEntityFrameworkStores<AppIdentityDBContext>()
                 .AddDefaultTokenProviders();
 
@@ -54,7 +54,7 @@ namespace TandooriRecipe
                     template: "{controller=TandooriRecipe}/{action=AddRecipe}/{id?}");
             });
 //            SeedData.EnsurePopulated(app);
-//            IdentitySeedData.EnsurePopulated( app);
+//            IdentitySeedData.EnsurePopulated(app);
         }
     }
 }

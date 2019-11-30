@@ -189,7 +189,6 @@ C:\Users\300985889\Source\Repos\abhishek1998\WebAssignmentWorking\TandooriRecipe
 C:\Users\300985889\Source\Repos\abhishek1998\WebAssignmentWorking\TandooriRecipe\obj\Debug\netcoreapp2.1\Razor\Views\TandooriRecipe\List.g.cshtml.cs
 C:\Users\300985889\Source\Repos\abhishek1998\WebAssignmentWorking\TandooriRecipe\obj\Debug\netcoreapp2.1\Razor\Views\_ViewImports.g.cshtml.cs
 C:\Users\300985889\Source\Repos\abhishek1998\WebAssignmentWorking\TandooriRecipe\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
-C:\Users\300985889\source\repos\abhishek1998\WebAssignmentWorking\TandooriRecipe\obj\Debug\netcoreapp2.1\Razor\Views\Account\Login - Copy.g.cshtml.cs
 C:\Users\300985889\source\repos\abhishek1998\WebAssignmentWorking\TandooriRecipe\obj\Debug\netcoreapp2.1\Razor\Views\Admin\Index.g.cshtml.cs
 C:\Users\300985889\Source\Repos\abhishek1998\WebAssignmentWorking\TandooriRecipe\obj\Debug\netcoreapp2.1\Razor\Views\Admin\Create.g.cshtml.cs
 C:\Users\300985889\RiderProjects\WebAssignmentWorking\TandooriRecipe\bin\Debug\netcoreapp2.1\TandooriRecipe.deps.json
@@ -227,3 +226,5 @@ C:\Users\300985889\RiderProjects\WebAssignmentWorking\TandooriRecipe\obj\Debug\n
 C:\Users\300985889\RiderProjects\WebAssignmentWorking\TandooriRecipe\obj\Debug\netcoreapp2.1\TandooriRecipe.dll
 C:\Users\300985889\RiderProjects\WebAssignmentWorking\TandooriRecipe\obj\Debug\netcoreapp2.1\TandooriRecipe.pdb
 C:\Users\300985889\RiderProjects\WebAssignmentWorking\TandooriRecipe\obj\Debug\netcoreapp2.1\TandooriRecipe.csproj.CopyComplete
+C:\Users\300985889\source\repos\abhishek1998\WebAssignmentWorking\TandooriRecipe\obj\Debug\netcoreapp2.1\Razor\Views\Account\Login.g.cshtml.cs
+C:\Users\300985889\source\repos\abhishek1998\WebAssignmentWorking\TandooriRecipe\obj\Debug\netcoreapp2.1\Razor\Views\Admin\Edit.g.cshtml.cs

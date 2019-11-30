@@ -24,10 +24,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Migrations\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <Content Update="Views\Admin\Create.cshtml">
         <Pack>$(IncludeRazorContentInPack)</Pack>
       </Content>

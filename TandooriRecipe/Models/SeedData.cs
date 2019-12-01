@@ -30,16 +30,12 @@ namespace TandooriRecipe.Models
                             "I've arrived at this recipe, which I think is pretty close. This version is very rich," +
                             " but you can leave out the cream to make it lighter. Kasuri methi (fenugreek leaves) is " +
                             "almost impossible to find in the U.S., even in NYC, but it gives this dish something very special.",
-//                        Ingredients =
-//                            "Lentils" +
-//                            "Dry Kidney Beans" +
-//                            "Vegetable Oil" +
-//                            "Cumin Seed" +
-//                            "Bay Leaves" +
-//                            "Whole Cloves" +
-//                            "Ground Turmeric" +
-//                            "Cayenne Pepper",
-                    
+                        RecipeIngredients = new List<Ingredients>()
+                        {
+                            new Ingredients() {
+                                Ingredient = "Lentils" + "Dry Kidney Beans" + "Vegetable Oil" + "Cumin Seed"  + "Bay Leaves" + "Whole Cloves" + "Ground Turmeric" + "Cayenne Pepper",
+                            }
+                        },
                     Directions =
                         "Place lentils and kidney beans in a large bowl; cover with plenty of water. Soak for at least 2 hours or overnight. Drain. " +
                         "Cook lentils, kidney beans, 5 cups water, and salt in a pot over medium heat until tender, stirring occasionally, about 1 hour. " +
@@ -51,15 +47,21 @@ namespace TandooriRecipe.Models
                         "cook and stir until butter is melted. " +
                         "Stir lentils, kidney beans and any leftover cooking water into tomato mixture; bring to a boil, reduce heat to low. " +
                         "Stir fenugreek into lentil mixture. Cover saucepan and simmer until heated through, stirring occasionally, about 45 minutes. " +
-                        "Add cream and cook until heated through, 2 to 4 minutes. ", 
-                    Reviews =  new List<string>()
+                        "Add cream and cook until heated through, 2 to 4 minutes. ",
+                        ReviewsDescription =  new List<Reviews>()
                     {
-                        "This food is good",
-                        "This food is terrible",
-                        "This food is okay",
-                        "This food is spectacular",
-                    } 
-            },
+
+                        //5,
+                        //8,
+                        //2,
+                        //5,
+                        
+                        new Reviews() {
+
+                        ReviewDesc = "This food is good"
+                        }
+                    }
+                    },
 
             new RecipeModel()
                 {
@@ -84,24 +86,48 @@ namespace TandooriRecipe.Models
                         "Mix green peas into dish and cook until sauce has slightly thickened and flavors have blended, 10 to 15 minutes." +
                         " Sprinkle garam masala over the dish, cover, and let stand for 5 minutes before serving. ",
 
-                    Reviews =  new List<string>()
+                    ReviewsDescription =  new List<Reviews>()
                     {
-                        "This food is good",
-                        "This food is terrible",
-                        "This food is okay",
-                        "This food is spectacular",
-                    } 
-//                    Ingredients =
-//                        "Lentils" +
-//                        "Dry Kidney Beans" +
-//                        "Vegetable Oil" +
-//                        "Cumin Seed" +
-//                        "Bay Leaves" +
-//                        "Whole Cloves" +
-//                        "Ground Turmeric" +
-//                        "Cayenne Pepper",
+                        //5,
+                        //8,
+                        //2,
+                        //5,
 
-                }
+                        new Reviews() {
+
+                        ReviewDesc = "This food is good" +
+                        "This food is terrible" +
+                        "This food is okay" +
+                        "This food is spectacular",
+                        },
+
+                        new Reviews() {
+
+                        ReviewDesc = "This food is okay"
+                        },
+
+                        new Reviews() {
+
+                        ReviewDesc = "This food is terrible" 
+                        },
+                    },
+                    RecipeIngredients = new List<Ingredients>()
+                        {
+                            new Ingredients() {
+                                Ingredient = "Lentils" + "Dry Kidney Beans" + "Vegetable Oil" + "Cumin Seed"  + "Bay Leaves" + "Whole Cloves" + "Ground Turmeric" + "Cayenne Pepper",
+                            }
+                        },
+                //                    Ingredients =
+                //                        "Lentils" +
+                //                        "Dry Kidney Beans" +
+                //                        "Vegetable Oil" +
+                //                        "Cumin Seed" +
+                //                        "Bay Leaves" +
+                //                        "Whole Cloves" +
+                //                        "Ground Turmeric" +
+                //                        "Cayenne Pepper",
+
+            }
                 );
             context.SaveChanges();
         }

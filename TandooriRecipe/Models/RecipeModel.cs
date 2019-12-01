@@ -14,10 +14,24 @@ namespace TandooriRecipe.Models
         public int RecipeId { get; set; }
 //        public string Ingredients { get; set; }
         public string Directions { get; set; }
-        public IEnumerable<string> Reviews { get; set; }
+        public List<Reviews> ReviewsDescription { get; set; }
+        public List<Ingredients> RecipeIngredients { get; set; }
 
-//        public string List<Reviews> { get; set; }
-//        public int  TimeRequired{ get; set; }
+        //        public string List<Reviews> { get; set; }
+        //        public int  TimeRequired{ get; set; }
 
+    }
+
+    public class Reviews {
+        [Key]
+        public int RecipeId { get; set; }
+        public string ReviewDesc { get; set; }
+    }
+
+    public class Ingredients
+    {
+        [Key]
+        public int RecipeId { get; set; }
+        public string Ingredient { get; set; }
     }
 }

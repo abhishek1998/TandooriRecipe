@@ -1,5 +1,6 @@
 @model TandooriRecipe.Models.RecipeModel
 
+
 @{
     Layout = "_Layout";
 }
@@ -10,20 +11,20 @@
         <h4> @Model.Name  </h4>
         <div class="pie-recipe__tips__text">
             @Model.Author
-        </div> <br> 
+        </div> <br>
         <div class="pie-recipe__tips__text">
             @Model.Directions
-        </div> <br> 
-        @foreach(var review in Model.Reviews)
+        </div> <br>
+        @foreach (var review in Model.ReviewsDescription)
         {
             <div class="pie-recipe__tips">
                 <div class="pie-recipe__tips__text">
                     @review
                 </div>
-            <br> 
+                <br>
             </div>
         }
     </div>
-      
+
 }
 

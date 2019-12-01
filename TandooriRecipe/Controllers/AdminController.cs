@@ -20,9 +20,9 @@ namespace SportsStore.Controllers {
                 .FirstOrDefault(p => p.RecipeId== productId));
         
         [HttpPost]
-        public IActionResult Edit(RecipeModel recipe) {
+        public IActionResult Edit(RecipeModel recipe, Reviews reviews, Ingredients ingredients) {
             if (ModelState.IsValid) {
-                repository.SaveRecipe(recipe);
+                repository.SaveRecipe(recipe, reviews, ingredients);
                 TempData["message"] = $"{recipe.Name} has been saved";
                 return RedirectToAction("Index");
             } else {

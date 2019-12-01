@@ -10,5 +10,8 @@ namespace TandooriRecipe.Models
         {}
         
         public DbSet<RecipeModel> Recipes { get; set; }
+        public DbSet<Reviews> Reviews { get; set; }
+        public DbSet<Ingredients> Ingredients { get; set; }
+
     }
 }

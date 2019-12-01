@@ -1,30 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\300985889\\source\\repos\\abhishek1998\\WebAssignmentWorking\\TandooriRecipe\\TandooriRecipe.csproj": {}
+    "/Users/abhi/RiderProjects/WebAssignmentWorking/TandooriRecipe/TandooriRecipe.csproj": {}
   },
   "projects": {
-    "C:\\Users\\300985889\\source\\repos\\abhishek1998\\WebAssignmentWorking\\TandooriRecipe\\TandooriRecipe.csproj": {
+    "/Users/abhi/RiderProjects/WebAssignmentWorking/TandooriRecipe/TandooriRecipe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\300985889\\source\\repos\\abhishek1998\\WebAssignmentWorking\\TandooriRecipe\\TandooriRecipe.csproj",
+        "projectUniqueName": "/Users/abhi/RiderProjects/WebAssignmentWorking/TandooriRecipe/TandooriRecipe.csproj",
         "projectName": "TandooriRecipe",
-        "projectPath": "C:\\Users\\300985889\\source\\repos\\abhishek1998\\WebAssignmentWorking\\TandooriRecipe\\TandooriRecipe.csproj",
-        "packagesPath": "C:\\Users\\300985889\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\300985889\\source\\repos\\abhishek1998\\WebAssignmentWorking\\TandooriRecipe\\obj\\",
+        "projectPath": "/Users/abhi/RiderProjects/WebAssignmentWorking/TandooriRecipe/TandooriRecipe.csproj",
+        "packagesPath": "/Users/abhi/.nuget/packages/",
+        "outputPath": "/Users/abhi/RiderProjects/WebAssignmentWorking/TandooriRecipe/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\300985889\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "/Users/abhi/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -78,7 +76,12 @@
             }
           },
           "imports": [
-            "net461"
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true

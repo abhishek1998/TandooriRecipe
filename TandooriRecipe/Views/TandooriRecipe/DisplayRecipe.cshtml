@@ -14,6 +14,16 @@
         <div class="pie-recipe__tips__text">
             @Model.Directions
         </div> <br> 
+        @foreach(var review in Model.Reviews)
+        {
+            <div class="pie-recipe__tips">
+                <div class="pie-recipe__tips__text">
+                    @review
+                </div>
+            <br> 
+            </div>
+        }
     </div>
+      
 }
 

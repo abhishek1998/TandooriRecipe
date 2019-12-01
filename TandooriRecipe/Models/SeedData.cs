@@ -52,7 +52,13 @@ namespace TandooriRecipe.Models
                         "Stir lentils, kidney beans and any leftover cooking water into tomato mixture; bring to a boil, reduce heat to low. " +
                         "Stir fenugreek into lentil mixture. Cover saucepan and simmer until heated through, stirring occasionally, about 45 minutes. " +
                         "Add cream and cook until heated through, 2 to 4 minutes. ", 
-
+                    Reviews =  new List<string>()
+                    {
+                        "This food is good",
+                        "This food is terrible",
+                        "This food is okay",
+                        "This food is spectacular",
+                    } 
             },
 
             new RecipeModel()
@@ -78,6 +84,13 @@ namespace TandooriRecipe.Models
                         "Mix green peas into dish and cook until sauce has slightly thickened and flavors have blended, 10 to 15 minutes." +
                         " Sprinkle garam masala over the dish, cover, and let stand for 5 minutes before serving. ",
 
+                    Reviews =  new List<string>()
+                    {
+                        "This food is good",
+                        "This food is terrible",
+                        "This food is okay",
+                        "This food is spectacular",
+                    } 
 //                    Ingredients =
 //                        "Lentils" +
 //                        "Dry Kidney Beans" +

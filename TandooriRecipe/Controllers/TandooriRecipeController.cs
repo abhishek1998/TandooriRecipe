@@ -50,11 +50,17 @@ namespace TandooriRecipe.Controllers
 
             return View(null);
         }
+        
+        public IActionResult Search(string name) 
+        {
+            return View();
+        }
 
         public IActionResult About()
         {
             ViewData["Message"] = " WebApp to learn about various Tandoori Oven Recipe ";
             return View();
         }
+
     }
 }

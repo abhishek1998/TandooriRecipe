@@ -69,7 +69,6 @@
             <e p="DisplayRecipe.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
             <e p="List.cshtml" t="Include" />
-            <e p="Search.cshtml" t="Include" />
           </e>
         </e>
         <e p="wwwroot" t="Include">

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using System.Collections.Generic;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TandooriRecipe.Models;
 
@@ -51,9 +52,17 @@ namespace TandooriRecipe.Controllers
             return View(null);
         }
         
-        public IActionResult Search(string name) 
+        public IActionResult Search(string name)
         {
-            return View();
+            var searchresult = new List<RecipeModel>();
+            foreach (var recipe in repo.Recipes)
+            {
+                if (recipe.Name == name)
+                {
+                    searchresult.Add(recipe);
+                }
+            }
+            return View("List", searchresult);
         }
 
         public IActionResult About()

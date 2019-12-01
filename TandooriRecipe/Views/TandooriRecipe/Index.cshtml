@@ -6,14 +6,16 @@
 }
 
 
-@foreach (TandooriRecipe.Models.RecipeModel item in Model) 
+@foreach (var item in Model) 
 {
     <div class="pie-recipe__tips">
         <h4> @item.Name  </h4>
         <div class="pie-recipe__tips__text">
             @item.Description
         </div> <br> 
-        <a asp-action="DisplayRecipe" asp-route-id="@item.RecipeId"><p class="pie-recipe__number"> See Full Recipe </p> </a> 
+        <a asp-action="DisplayRecipe" asp-route-id="@item.RecipeId">
+            <p class="pie-recipe__number"> See Full Recipe </p> 
+        </a> 
     </div>
 }
             

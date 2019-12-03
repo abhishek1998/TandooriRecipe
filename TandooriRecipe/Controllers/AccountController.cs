@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using TandooriRecipe.Models;
 using TandooriRecipe.Models.ViewsModel;
 
 namespace TandooriRecipe.Controllers
@@ -16,6 +17,7 @@ namespace TandooriRecipe.Controllers
         {
             _userManager = userMgnr;
             _signInManager = signInMngr;
+            IdentitySeedData.EnsurePopulated(userMgnr).Wait();
         }
 
         [AllowAnonymous]

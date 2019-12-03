@@ -10,7 +10,7 @@ using TandooriRecipe.Models;
 namespace TandooriRecipe.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20191201223306_Initial")]
+    [Migration("20191203191711_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

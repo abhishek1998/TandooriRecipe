@@ -12,13 +12,10 @@ namespace TandooriRecipe.Models
         public string Description { get; set; }
         [Key]
         public int RecipeId { get; set; }
-//        public string Ingredients { get; set; }
         public string Directions { get; set; }
         public List<Reviews> ReviewsDescription { get; set; }
         public List<Ingredients> RecipeIngredients { get; set; }
 
-        //        public string List<Reviews> { get; set; }
-        //        public int  TimeRequired{ get; set; }
 
     }
 

@@ -33,10 +33,31 @@ namespace TandooriRecipe.Models
                         RecipeIngredients = new List<Ingredients>()
                         {
                             new Ingredients() {
-                                Ingredient = "Lentils" + "Dry Kidney Beans" + "Vegetable Oil" + "Cumin Seed"  + "Bay Leaves" + "Whole Cloves" + "Ground Turmeric" + "Cayenne Pepper",
-                            }
+                                Ingredient = "Lentils"
+                            },
+                            new Ingredients() {
+                                Ingredient = "Dry Kidney Beans"
+                            },
+                            new Ingredients() {
+                                Ingredient = "Vegetable Oil"
+                            },
+                            new Ingredients() {
+                                Ingredient = "Cumin Seed"
+                            },
+                            new Ingredients() {
+                                Ingredient = "Bay Leaves"
+                            },
+                            new Ingredients() {
+                                Ingredient = "Whole Cloves"
+                            },
+                            new Ingredients() {
+                                Ingredient = "Ground Turmeric"
+                            },
+                            new Ingredients() {
+                                Ingredient = "Cayenne Pepper"
+                            },
                         },
-                    Directions =
+                        Directions =
                         "Place lentils and kidney beans in a large bowl; cover with plenty of water. Soak for at least 2 hours or overnight. Drain. " +
                         "Cook lentils, kidney beans, 5 cups water, and salt in a pot over medium heat until tender, stirring occasionally, about 1 hour. " +
                         "Remove from heat and set aside. Keep the lentils, kidney beans, and any excess cooking water in the pot. " +
@@ -51,10 +72,6 @@ namespace TandooriRecipe.Models
                         ReviewsDescription =  new List<Reviews>()
                     {
 
-                        //5,
-                        //8,
-                        //2,
-                        //5,
                         
                         new Reviews() {
 
@@ -95,10 +112,7 @@ namespace TandooriRecipe.Models
 
                         new Reviews() {
 
-                        ReviewDesc = "This food is good" +
-                        "This food is terrible" +
-                        "This food is okay" +
-                        "This food is spectacular",
+                        ReviewDesc = "This food is good"
                         },
 
                         new Reviews() {
@@ -114,8 +128,29 @@ namespace TandooriRecipe.Models
                     RecipeIngredients = new List<Ingredients>()
                         {
                             new Ingredients() {
-                                Ingredient = "Lentils" + "Dry Kidney Beans" + "Vegetable Oil" + "Cumin Seed"  + "Bay Leaves" + "Whole Cloves" + "Ground Turmeric" + "Cayenne Pepper",
-                            }
+                                Ingredient = "Lentils"
+                            },
+                            new Ingredients() {
+                                Ingredient = "Dry Kidney Beans"
+                            },
+                            new Ingredients() {
+                                Ingredient = "Vegetable Oil"
+                            },
+                            new Ingredients() {
+                                Ingredient = "Cumin Seed"
+                            },
+                            new Ingredients() {
+                                Ingredient = "Bay Leaves"
+                            },
+                            new Ingredients() {
+                                Ingredient = "Whole Cloves"
+                            },
+                            new Ingredients() {
+                                Ingredient = "Ground Turmeric"
+                            },
+                            new Ingredients() {
+                                Ingredient = "Cayenne Pepper"
+                            },
                         },
                 //                    Ingredients =
                 //                        "Lentils" +

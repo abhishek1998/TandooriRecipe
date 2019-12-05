@@ -1,0 +1,17 @@
+@model IEnumerable<TandooriRecipe.Models.RecipeModel>
+
+@{
+    ViewData["Title"] = "Tandoori Recipe Home";
+    Layout="_Layout";
+}
+
+
+<form asp-action="Search" method="post">
+    <div class="row input-group">
+        <input type="text" name="name" id="name" class="form-control"/>
+        <div class="input-group-btn">
+            <button class="btn btn-primary" type="submit" asp-controller="TandooriRecipe" asp-action="Search"> Search </button>
+        </div>
+    </div>
+</form>
+            

@@ -21,10 +21,10 @@ namespace TandooriRecipe.Models {
             } else {
                 RecipeModel dbEntry = context.Recipes
                     .FirstOrDefault(r => r.RecipeId == recipe.RecipeId);
-                Reviews dbEntry2 = context.Reviews
-                    .FirstOrDefault(r => r.RecipeId == recipe.RecipeId);
-                Ingredients dbEntry3 = context.Ingredients
-                    .FirstOrDefault(r => r.RecipeId == recipe.RecipeId);
+                //Reviews dbEntry2 = context.Reviews
+                //    .FirstOrDefault(r => r.RecipeId == recipe.RecipeId);
+                //Ingredients dbEntry3 = context.Ingredients
+                //    .FirstOrDefault(r => r.RecipeId == recipe.RecipeId);
                 if (dbEntry != null) {
                     dbEntry.Name = recipe.Name;
                     dbEntry.RecipeId = recipe.RecipeId;
@@ -32,11 +32,11 @@ namespace TandooriRecipe.Models {
                     dbEntry.Author = recipe.Author;
                     dbEntry.Directions = recipe.Directions;
                     dbEntry.ReviewsDescription = recipe.ReviewsDescription;
-                    dbEntry2.RecipeId = recipe.RecipeId;
-                    dbEntry2.ReviewDesc = reviews.ReviewDesc;
-                    dbEntry3.RecipeId = recipe.RecipeId;
-                    dbEntry.RecipeIngredients = recipe.RecipeIngredients;
-                    dbEntry3.Ingredient = ingredients.Ingredient;
+                    //dbEntry2.RecipeId = recipe.RecipeId;
+                    //dbEntry2.ReviewDesc = reviews.ReviewDesc;
+                    //dbEntry3.RecipeId = recipe.RecipeId;
+                    //dbEntry.RecipeIngredients = recipe.RecipeIngredients;
+                    //dbEntry3.Ingredient = ingredients.Ingredient;
                 }
             }
             context.SaveChanges();

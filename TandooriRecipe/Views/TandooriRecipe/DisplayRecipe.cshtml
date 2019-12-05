@@ -1,5 +1,7 @@
 @model TandooriRecipe.Models.RecipeModel
 
+@using System.Linq
+
 
 @{
     Layout = "_Layout";
@@ -7,24 +9,36 @@
 
 @if (Model != null)
 {
-    <div class="pie-recipe__tips">
-        <h4> @Model.Name  </h4>
-        <div class="pie-recipe__tips__text">
-            @Model.Author
-        </div> <br>
-        <div class="pie-recipe__tips__text">
-            @Model.Directions
-        </div> <br>
-        @*@foreach (var review in Model.ReviewsDescription)
-        {
-            <div class="pie-recipe__tips">
-                <div class="pie-recipe__tips__text">
-                    @review
-                </div>
-                <br>
+<div class="pie-recipe__tips">
+    <h4> @Model.Name  </h4>
+    <div class="pie-recipe__tips__text">
+        @Model.Author
+    </div> <br>
+    <div class="pie-recipe__tips__text">
+        @Model.Description
+    </div> <br>
+
+    @foreach (var ingredient in Model.RecipeIngredients)
+    {
+        <div class="pie-recipe__tips">
+            <div class="pie-recipe__tips__text">
+                @ingredient
             </div>
-        }*@S
-    </div>
+            <br>
+        </div>
+    }
+
+
+    @foreach (var review in Model.ReviewsDescription)
+    {
+        <div class="pie-recipe__tips">
+            <div class="pie-recipe__tips__text">
+                @review
+            </div>
+            <br>
+        </div>
+    }
+</div>
 
 }
 

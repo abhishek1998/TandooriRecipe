@@ -27,51 +27,51 @@ namespace TandooriRecipe.Migrations
                 name: "Ingredients",
                 columns: table => new
                 {
-                    RecipeId = table.Column<int>(nullable: false)
+                    IngredientId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Ingredient = table.Column<string>(nullable: true),
-                    RecipeModelRecipeId = table.Column<int>(nullable: true)
+                    RecipeId = table.Column<int>(nullable: false),
+                    Ingredient = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Ingredients", x => x.RecipeId);
+                    table.PrimaryKey("PK_Ingredients", x => x.IngredientId);
                     table.ForeignKey(
-                        name: "FK_Ingredients_Recipes_RecipeModelRecipeId",
-                        column: x => x.RecipeModelRecipeId,
+                        name: "FK_Ingredients_Recipes_RecipeId",
+                        column: x => x.RecipeId,
                         principalTable: "Recipes",
                         principalColumn: "RecipeId",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Reviews",
                 columns: table => new
                 {
-                    RecipeId = table.Column<int>(nullable: false)
+                    ReviewId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    ReviewDesc = table.Column<string>(nullable: true),
-                    RecipeModelRecipeId = table.Column<int>(nullable: true)
+                    RecipeId = table.Column<int>(nullable: false),
+                    ReviewDesc = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Reviews", x => x.RecipeId);
+                    table.PrimaryKey("PK_Reviews", x => x.ReviewId);
                     table.ForeignKey(
-                        name: "FK_Reviews_Recipes_RecipeModelRecipeId",
-                        column: x => x.RecipeModelRecipeId,
+                        name: "FK_Reviews_Recipes_RecipeId",
+                        column: x => x.RecipeId,
                         principalTable: "Recipes",
                         principalColumn: "RecipeId",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Ingredients_RecipeModelRecipeId",
+                name: "IX_Ingredients_RecipeId",
                 table: "Ingredients",
-                column: "RecipeModelRecipeId");
+                column: "RecipeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Reviews_RecipeModelRecipeId",
+                name: "IX_Reviews_RecipeId",
                 table: "Reviews",
-                column: "RecipeModelRecipeId");
+                column: "RecipeId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

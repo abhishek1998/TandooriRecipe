@@ -11930,23 +11930,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\300985889\\.nuget\\packages\\": {},
+    "C:\\Users\\rohit\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\300985889\\Source\\Repos\\abhishek1998\\WebAssignmentWorking\\TandooriRecipe\\TandooriRecipe.csproj",
+      "projectUniqueName": "C:\\Users\\rohit\\Source\\Repos\\abhishek1998\\WebAssignmentWorking\\TandooriRecipe\\TandooriRecipe.csproj",
       "projectName": "TandooriRecipe",
-      "projectPath": "C:\\Users\\300985889\\Source\\Repos\\abhishek1998\\WebAssignmentWorking\\TandooriRecipe\\TandooriRecipe.csproj",
-      "packagesPath": "C:\\Users\\300985889\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\300985889\\Source\\Repos\\abhishek1998\\WebAssignmentWorking\\TandooriRecipe\\obj\\",
+      "projectPath": "C:\\Users\\rohit\\Source\\Repos\\abhishek1998\\WebAssignmentWorking\\TandooriRecipe\\TandooriRecipe.csproj",
+      "packagesPath": "C:\\Users\\rohit\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rohit\\Source\\Repos\\abhishek1998\\WebAssignmentWorking\\TandooriRecipe\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\300985889\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rohit\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

@@ -51,13 +51,20 @@ namespace TandooriRecipe.Controllers
 
             return View(null);
         }
+
+        public IActionResult SearchView()
+        {
+            return View();
+        }
+
         
         public IActionResult Search(string name)
         {
             var searchresult = new List<RecipeModel>();
+            name = name.ToUpper();
             foreach (var recipe in repo.Recipes)
             {
-                if (recipe.Name == name)
+                if (recipe.Name.ToUpper() == name)
                 {
                     searchresult.Add(recipe);
                 }

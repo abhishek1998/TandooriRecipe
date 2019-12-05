@@ -27,6 +27,9 @@
       <Content Update="Views\Admin\Create.cshtml">
         <Pack>$(IncludeRazorContentInPack)</Pack>
       </Content>
+      <Content Update="Views\TandooriRecipe\SearchView.cshtml">
+        <Pack>$(IncludeRazorContentInPack)</Pack>
+      </Content>
     </ItemGroup>
 
 </Project>

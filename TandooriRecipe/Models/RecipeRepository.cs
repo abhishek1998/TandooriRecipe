@@ -6,11 +6,11 @@ namespace TandooriRecipe.Models
 {
     public static  class RecipeRepository 
     {
-        private static readonly List<RecipeModel> RecipeList = new List<RecipeModel>();
+        private static readonly List<Recipe> RecipeList = new List<Recipe>();
         
-        public static IEnumerable<RecipeModel> Response => RecipeList;
+        public static IEnumerable<Recipe> Response => RecipeList;
 
-        public static void AddRecipeToRepo(RecipeModel newRecipe)
+        public static void AddRecipeToRepo(Recipe newRecipe)
         {
             RecipeList.Add(newRecipe);
         }

@@ -1,4 +1,4 @@
-@model IEnumerable<TandooriRecipe.Models.RecipeModel>
+@model IEnumerable<TandooriRecipe.Models.Recipe>
 
 @{
     ViewData["Title"] = "Tandoori Recipe Home";
@@ -6,7 +6,7 @@
 }
 
             
-@foreach (TandooriRecipe.Models.RecipeModel item in Model)
+@foreach (TandooriRecipe.Models.Recipe item in Model)
 {
     <div class="jumbotron jumbotron-fluid">
         <div class="container">

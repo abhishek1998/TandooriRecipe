@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.DependencyInjection;
+using TandooriRecipe.Models.ViewsModel;
 
 namespace TandooriRecipe.Models
 {
@@ -9,7 +10,8 @@ namespace TandooriRecipe.Models
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {}
         
-        public DbSet<RecipeModel> Recipes { get; set; }
+        public DbSet<RecipeViewModel> RecipesVM { get; set; }
+        public DbSet<Recipe> Recipes { get; set; }
         public DbSet<Reviews> Reviews { get; set; }
         public DbSet<Ingredients> Ingredients { get; set; }
 

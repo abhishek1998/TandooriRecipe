@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\300985889\\source\\repos\\abhishek1998\\WebAssignmentWorking\\TandooriRecipe\\TandooriRecipe.csproj": {}
+    "C:\\Users\\300985889\\source\\repos\\WebAssignmentWorking\\TandooriRecipe\\TandooriRecipe.csproj": {}
   },
   "projects": {
-    "C:\\Users\\300985889\\source\\repos\\abhishek1998\\WebAssignmentWorking\\TandooriRecipe\\TandooriRecipe.csproj": {
+    "C:\\Users\\300985889\\source\\repos\\WebAssignmentWorking\\TandooriRecipe\\TandooriRecipe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\300985889\\source\\repos\\abhishek1998\\WebAssignmentWorking\\TandooriRecipe\\TandooriRecipe.csproj",
+        "projectUniqueName": "C:\\Users\\300985889\\source\\repos\\WebAssignmentWorking\\TandooriRecipe\\TandooriRecipe.csproj",
         "projectName": "TandooriRecipe",
-        "projectPath": "C:\\Users\\300985889\\source\\repos\\abhishek1998\\WebAssignmentWorking\\TandooriRecipe\\TandooriRecipe.csproj",
+        "projectPath": "C:\\Users\\300985889\\source\\repos\\WebAssignmentWorking\\TandooriRecipe\\TandooriRecipe.csproj",
         "packagesPath": "C:\\Users\\300985889\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\300985889\\source\\repos\\abhishek1998\\WebAssignmentWorking\\TandooriRecipe\\obj\\",
+        "outputPath": "C:\\Users\\300985889\\source\\repos\\WebAssignmentWorking\\TandooriRecipe\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -1,5 +1,6 @@
-@model TandooriRecipe.Models.RecipeModel
-
+@* @model Tuple <TandooriRecipe.Models.ViewsModel.In, TandooriRecipe.Models.>  *@
+@model Tuple<List<Ingredients>, Recipe,List<Reviews>>
+@* @using MultipleModelInOneView;   *@
 @using System.Linq
 
 
@@ -7,38 +8,36 @@
     Layout = "_Layout";
 }
 
-@if (Model != null)
+@if (Model.Item1 != null && Model.Item2 != null)
 {
-<div class="pie-recipe__tips">
-    <h4> @Model.Name  </h4>
-    <div class="pie-recipe__tips__text">
-        @Model.Author
-    </div> <br>
-    <div class="pie-recipe__tips__text">
-        @Model.Description
-    </div> <br>
+ <div class="pie-recipe__tips"> 
+     @* <h4> @Model.recipeItem.Name</h4>  *@
+     <h4>@Model.Item2.Name </h4>
+     <div class="pie-recipe__tips__text"> 
+    @Model.Item2.Author
+    </div> <br> 
+    <div class="pie-recipe__tips__text"> 
+    @Model.Item2.Description
+     </div> <br> 
 
-    @foreach (var ingredient in Model.RecipeIngredients)
-    {
-        <div class="pie-recipe__tips">
-            <div class="pie-recipe__tips__text">
-                @ingredient
-            </div>
-            <br>
-        </div>
-    }
-
-
-    @foreach (var review in Model.ReviewsDescription)
-    {
-        <div class="pie-recipe__tips">
-            <div class="pie-recipe__tips__text">
-                @review
-            </div>
-            <br>
-        </div>
-    }
+    @foreach (var ingredient in Model.Item1) 
+     {
+         <div class="pie-recipe__tips">
+             <div class="pie-recipe__tips__text">
+                 @ingredient.Ingredient
+             </div>
+             <br>
+         </div>
+     }
+       @foreach (var review in Model.Item3)
+       {
+           <div class="pie-recipe__tips">
+               <div class="pie-recipe__tips__text">
+                   @review.ReviewDesc
+               </div>
+               <br>
+           </div>
+       }
 </div>
-
 }
 

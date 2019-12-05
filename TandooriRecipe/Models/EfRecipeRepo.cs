@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using TandooriRecipe.Models.ViewsModel;
 
 namespace TandooriRecipe.Models {
 
@@ -10,28 +11,31 @@ namespace TandooriRecipe.Models {
             context = ctx;
         }
 
-        public IQueryable<RecipeModel> Recipes => context.Recipes;
+//        public IQueryable<Recipe> RecipeViewModel => context.RecipesVM;
+        public IQueryable<RecipeViewModel> RecipesViewModel => context.RecipesVM; 
+        public IQueryable<Recipe> Recipes => context.Recipes;
         public IQueryable<Reviews> Reviews => context.Reviews;
         public IQueryable<Ingredients> Ingredients => context.Ingredients;
 
-        public void SaveRecipe(RecipeModel recipe, Reviews reviews, Ingredients ingredients)
+        public void SaveRecipe(Recipe recipe, Reviews reviews, Ingredients ingredients)
         {
             if (recipe.RecipeId == 0) {
                 context.Recipes.Add(recipe);
             } else {
-                RecipeModel dbEntry = context.Recipes
+                RecipeViewModel dbEntry = context.RecipesVM
+                    .FirstOrDefault(r => r.recipeItem.RecipeId == recipe.RecipeId);
+                Reviews dbEntry2 = context.Reviews
                     .FirstOrDefault(r => r.RecipeId == recipe.RecipeId);
-                //Reviews dbEntry2 = context.Reviews
-                //    .FirstOrDefault(r => r.RecipeId == recipe.RecipeId);
-                //Ingredients dbEntry3 = context.Ingredients
-                //    .FirstOrDefault(r => r.RecipeId == recipe.RecipeId);
+                Ingredients dbEntry3 = context.Ingredients
+                    .FirstOrDefault(r => r.RecipeId == recipe.RecipeId);
                 if (dbEntry != null) {
-                    dbEntry.Name = recipe.Name;
-                    dbEntry.RecipeId = recipe.RecipeId;
-                    dbEntry.Description = recipe.Description;
-                    dbEntry.Author = recipe.Author;
-                    dbEntry.Directions = recipe.Directions;
-                    dbEntry.ReviewsDescription = recipe.ReviewsDescription;
+                    dbEntry.recipeItem.Name = recipe.Name;
+                    dbEntry.recipeItem.RecipeId = recipe.RecipeId;
+                    dbEntry.recipeItem.Description = recipe.Description;
+                    dbEntry.recipeItem.Author = recipe.Author;
+                    dbEntry.recipeItem.Directions = recipe.Directions;
+                    dbEntry2.ReviewDesc = reviews.ReviewDesc;
+                    dbEntry3.Ingredient = ingredients.Ingredient;
                     //dbEntry2.RecipeId = recipe.RecipeId;
                     //dbEntry2.ReviewDesc = reviews.ReviewDesc;
                     //dbEntry3.RecipeId = recipe.RecipeId;
@@ -42,8 +46,8 @@ namespace TandooriRecipe.Models {
             context.SaveChanges();
         }
 
-        public RecipeModel DeleteRecipe(int RecipeId) {
-            RecipeModel dbEntry = context.Recipes
+        public Recipe DeleteRecipe(int RecipeId) {
+            Recipe dbEntry = context.Recipes
                 .FirstOrDefault(r => r.RecipeId == RecipeId);
             if (dbEntry != null) {
                 context.Recipes.Remove(dbEntry);

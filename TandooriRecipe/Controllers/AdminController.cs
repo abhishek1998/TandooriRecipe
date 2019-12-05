@@ -20,7 +20,7 @@ namespace SportsStore.Controllers {
                 .FirstOrDefault(p => p.RecipeId== productId));
         
         [HttpPost]
-        public IActionResult Edit(RecipeModel recipe, Reviews reviews, Ingredients ingredients) {
+        public IActionResult Edit(Recipe recipe, Reviews reviews, Ingredients ingredients) {
             if (ModelState.IsValid) {
                 repository.SaveRecipe(recipe, reviews, ingredients);
                 TempData["message"] = $"{recipe.Name} has been saved";
@@ -31,11 +31,11 @@ namespace SportsStore.Controllers {
             }
         }
 
-        public ViewResult Create() => View("Edit", new RecipeModel());
+        public ViewResult Create() => View("Edit", new Recipe());
 
         [HttpPost]
         public IActionResult Delete(int recipeId) {
-            RecipeModel deletedRecipe = repository.DeleteRecipe(recipeId);
+            Recipe deletedRecipe = repository.DeleteRecipe(recipeId);
             if (deletedRecipe != null) {
                 TempData["message"] = $"{deletedRecipe.Name} was deleted";
             }

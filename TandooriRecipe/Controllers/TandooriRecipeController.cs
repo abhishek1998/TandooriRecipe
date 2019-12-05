@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Dynamic;
+using System.Linq;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TandooriRecipe.Models;
@@ -105,17 +106,41 @@ namespace TandooriRecipe.Controllers
         }
 
         //[HttpGet]
-        public IActionResult Search(string name)
+        public IActionResult Search(string name, bool searchRecipe)
         {
             var searchresult =  new List<Recipe>();
-            name = name.ToUpper();
-            foreach (var recipe in repo.Recipes)
+            
+            
+            
+
+            if (searchRecipe)
             {
-                if (recipe.Name.ToUpper() == name)
+                foreach (var recipe in repo.Recipes)
                 {
-                    searchresult.Add(recipe);
+                    if (recipe.Name.ToUpper() == name)
+                    {
+                        searchresult.Add(recipe);
+                    }
                 }
             }
+            else
+            {
+                foreach (var recipe in repo.Ingredients)
+                {
+                    if(recipe.Ingredient.ToLower() == name.ToLower())
+                    {
+                        var id = recipe.RecipeId;
+                        foreach (var item in repo.Recipes)
+                        {
+                            if (item.RecipeId == id)
+                            {
+                                searchresult.Add(item);
+                            }
+                        }
+                    }
+                }
+            }
+
             return View("List", searchresult);
         }
 

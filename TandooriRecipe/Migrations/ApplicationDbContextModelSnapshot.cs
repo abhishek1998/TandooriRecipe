@@ -15,9 +15,26 @@ namespace TandooriRecipe.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "2.1.4-rtm-31024")
+                .HasAnnotation("ProductVersion", "2.1.11-servicing-32099")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("TandooriRecipe.Models.Favourite", b =>
+                {
+                    b.Property<int>("FavouriteID")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("RecipeId");
+
+                    b.Property<string>("UserName");
+
+                    b.Property<string>("recipeName");
+
+                    b.HasKey("FavouriteID");
+
+                    b.ToTable("Favourites");
+                });
 
             modelBuilder.Entity("TandooriRecipe.Models.Ingredients", b =>
                 {

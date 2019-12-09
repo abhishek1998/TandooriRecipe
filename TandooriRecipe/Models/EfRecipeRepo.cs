@@ -16,6 +16,8 @@ namespace TandooriRecipe.Models {
         public IQueryable<Recipe> Recipes => context.Recipes;
         public IQueryable<Reviews> Reviews => context.Reviews;
         public IQueryable<Ingredients> Ingredients => context.Ingredients;
+        public IQueryable<Favourite> Favourites => context.Favourites;
+
 
         public void SaveRecipe(Recipe recipe, Reviews reviews, Ingredients ingredients)
         {
@@ -54,6 +56,28 @@ namespace TandooriRecipe.Models {
                 context.SaveChanges();
             }
             return dbEntry;
+        }
+
+
+        public void AddFavourite(Recipe recipe, Favourite favourite)
+        {
+            if (favourite.FavouriteID == 0)
+            {
+                context.Favourites.Add(favourite);
+            } else {
+                RecipeViewModel dbEntry = context.RecipesVM
+                    .FirstOrDefault(r => r.recipeItem.RecipeId == recipe.RecipeId);
+                Favourite dbEntry2 = context.Favourites
+                    .FirstOrDefault(r => r.RecipeId == recipe.RecipeId);
+                if (dbEntry != null) {
+                    dbEntry.recipeItem.Name = favourite.recipeName;
+                    dbEntry.recipeItem.RecipeId = recipe.RecipeId;
+                    dbEntry2.FavouriteID = favourite.FavouriteID;
+                    dbEntry2.UserName = favourite.UserName;
+                }
+
+            }
+            context.SaveChanges();
         }
     }
 }

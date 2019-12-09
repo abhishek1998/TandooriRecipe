@@ -8,10 +8,12 @@
 
 <form asp-action="Search" method="post">
     <div class="row input-group">
-        <input type="text" name="name" id="name" class="form-control"/>
+        <span><input type="text" name="name" id="name" class="form-control"/></span>
         <div class="input-group-btn">
-            <button class="btn btn-primary" type="submit" asp-controller="TandooriRecipe" asp-route-searchRecipe="false" asp-action="Search" > Search Ingredient </button>
-            <button class="btn btn-primary" type="submit" asp-controller="TandooriRecipe" asp-route-searchRecipe="true" asp-action="Search"> Search Recipe </button>
+            <button type="submit" asp-controller="TandooriRecipe" asp-route-searchRecipe="false" asp-action="Search" class="btn draw-border">  Search Ingredient  </button>
+            <button type="submit" asp-controller="TandooriRecipe" asp-route-searchRecipe="true" asp-action="Search" class="btn draw-border"> Search Recipe </button>
+            @*<button class="btn btn-primary" type="submit" asp-controller="TandooriRecipe" asp-route-searchRecipe="false" asp-action="Search" > Search Ingredient </button>
+        <button class="btn btn-primary" type="submit" asp-controller="TandooriRecipe" asp-route-searchRecipe="true" asp-action="Search"> Search Recipe </button>*@
         </div>
     </div>
 </form>

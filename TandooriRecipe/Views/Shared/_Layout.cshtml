@@ -101,13 +101,33 @@
             <br>
             <li>
                 <div class="md:flex bg-teal-100 rounded-lg p-3">
-                    <a class="text-lg text-purple-800" asp-controller="TandooriRecipe" asp-action="SearchView"> Favourites </a>
+                    <a class="text-lg text-purple-800" asp-controller="TandooriRecipe" asp-action="ListF"> Favourites </a>
                 </div>
             </li>
-            <br>-->
+            <br>
+            <li>
+                <div class="md:flex bg-teal-100 rounded-lg p-3">
+                    <a class="text-lg text-purple-800" asp-controller="TandooriRecipe" asp-action="SearchView"> Search </a>
+                </div>
+            </li>
+            <br>
+            @*<li>
+            <form asp-action="Search" method="post">
+                <div class="row input-group">
+                    <input type="text" name="name" id="name" class="form-control" />
+                    <div class="input-group-btn">
+                        <li>
+                        <button type="submit" asp-controller="TandooriRecipe" asp-route-searchRecipe="false" asp-action="Search" class="btn draw-border">  Search Ingredient  </button>
+                        <</li>>
+                        <button type="submit" asp-controller="TandooriRecipe" asp-route-searchRecipe="true" asp-action="Search" class="btn draw-border"> Search Recipe </button>
+                    </div>
+                </div>
+            </form>
+        </li>*@
+            <br>
         </ul>
     </nav>
-    <div>
+    @*<div>
         <form asp-action="Search" method="post">
             <div class="row input-group">
                 <input type="text" name="name" id="name" class="form-control"/>
@@ -117,7 +137,7 @@
                 </div>
             </div>
         </form>
-    </div>
+    </div>*@
     <div>
     <main>
               @RenderBody()

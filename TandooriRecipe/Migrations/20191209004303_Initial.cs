@@ -8,6 +8,21 @@ namespace TandooriRecipe.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Favourites",
+                columns: table => new
+                {
+                    FavouriteID = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    RecipeId = table.Column<int>(nullable: false),
+                    UserName = table.Column<string>(nullable: true),
+                    recipeName = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Favourites", x => x.FavouriteID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "RecipesVM",
                 columns: table => new
                 {
@@ -103,6 +118,9 @@ namespace TandooriRecipe.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Favourites");
+
             migrationBuilder.DropTable(
                 name: "Ingredients");
 

@@ -5,8 +5,8 @@
       "EntityFramework/6.4.0-preview2-19525-03": {
         "type": "package",
         "build": {
-          "buildTransitive/EntityFramework.props": {},
-          "buildTransitive/EntityFramework.targets": {}
+          "build/EntityFramework.props": {},
+          "build/EntityFramework.targets": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -12010,23 +12010,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\300985889\\.nuget\\packages\\": {},
+    "C:\\Users\\rohit\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\300985889\\source\\repos\\WebAssignmentWorking\\TandooriRecipe\\TandooriRecipe.csproj",
+      "projectUniqueName": "C:\\Users\\rohit\\Source\\Repos\\abhishek1998\\WebAssignmentWorking\\TandooriRecipe\\TandooriRecipe.csproj",
       "projectName": "TandooriRecipe",
-      "projectPath": "C:\\Users\\300985889\\source\\repos\\WebAssignmentWorking\\TandooriRecipe\\TandooriRecipe.csproj",
-      "packagesPath": "C:\\Users\\300985889\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\300985889\\source\\repos\\WebAssignmentWorking\\TandooriRecipe\\obj\\",
+      "projectPath": "C:\\Users\\rohit\\Source\\Repos\\abhishek1998\\WebAssignmentWorking\\TandooriRecipe\\TandooriRecipe.csproj",
+      "packagesPath": "C:\\Users\\rohit\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rohit\\Source\\Repos\\abhishek1998\\WebAssignmentWorking\\TandooriRecipe\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\300985889\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\rohit\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -12066,13 +12066,12 @@
             "version": "[2.1.2, )"
           },
           "Microsoft.EntityFrameworkCore.Design": {
-            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers",
             "suppressParent": "All",
             "target": "Package",
             "version": "[3.0.0, )"
           },
           "Microsoft.NETCore.App": {
-            "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )",
             "autoReferenced": true

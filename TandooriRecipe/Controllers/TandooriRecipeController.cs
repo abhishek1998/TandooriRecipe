@@ -29,6 +29,24 @@ namespace TandooriRecipe.Controllers
 
         [Authorize]
         [HttpGet]
+        public IActionResult AddReview()
+        {
+            return View();
+        }
+
+        [Authorize]
+        [HttpPost]
+        public IActionResult AddReview(Reviews newReview)
+        {
+            RecipeRepository.AddReviewToRepo(newReview);
+            return View("List", RecipeRepository.Response3);
+        }
+
+
+
+
+        [Authorize]
+        [HttpGet]
         public IActionResult AddRecipe()
         {
             return View();
@@ -39,7 +57,7 @@ namespace TandooriRecipe.Controllers
         public IActionResult AddRecipe(Recipe newRecipe)
         {
             RecipeRepository.AddRecipeToRepo(newRecipe);
-            return View("Index",RecipeRepository.Response);
+            return View("List",repo.Recipes);
         }
 
         public List<Reviews> getReviews(int id )
@@ -87,18 +105,19 @@ namespace TandooriRecipe.Controllers
 
             return result;
         }
-
         public IActionResult DisplayRecipe(int id)
         {
             var recipe = getRecipe(id);
             var ingredient = getIngredient(id);
             var reviews = getReviews(id);
-            
-            Tuple<List<Ingredients>, Recipe, List<Reviews>>  result = new Tuple<List<Ingredients>, Recipe, List<Reviews>>(ingredient,recipe,reviews);
-            
+
+            Tuple<List<Ingredients>, Recipe, List<Reviews>> result = new Tuple<List<Ingredients>, Recipe, List<Reviews>>(ingredient, recipe, reviews);
+
 
             return View(result);
         }
+            
+        
 
         public IActionResult SearchView()
         {
@@ -117,7 +136,14 @@ namespace TandooriRecipe.Controllers
             {
                 foreach (var recipe in repo.Recipes)
                 {
-                    if (recipe.Name.ToUpper() == name)
+                    if (recipe.Name.ToUpper() == name.ToUpper())
+                    {
+                        searchresult.Add(recipe);
+                    }
+                }
+                foreach (var recipe in RecipeRepository.Response)
+                {
+                    if (recipe.Name.ToUpper() == name.ToUpper())
                     {
                         searchresult.Add(recipe);
                     }
@@ -139,10 +165,51 @@ namespace TandooriRecipe.Controllers
                         }
                     }
                 }
+                
             }
 
             return View("List", searchresult);
         }
+
+        [Authorize]
+        [HttpGet]
+        public IActionResult AddFavourite()
+        {
+            return View("Favourite");
+        }
+
+        [HttpPost]
+        public IActionResult AddFavourite(Favourite newFavourite)
+        {
+            RecipeRepository.AddFavToRepo(newFavourite);
+            return View("ListF", repo.Favourites);
+        }
+
+        public Favourite getFavourite(int id)
+        {
+            Favourite result = null;
+
+            foreach (var item in repo.Favourites)
+            {
+                if (id == item.RecipeId)
+                {
+                    result = item;
+                    break;
+                }
+            }
+
+            return result;
+        }
+
+        public ViewResult ListF(int id)
+        {
+            var recipe = getRecipe(id);
+            var ingredient = getIngredient(id);
+            var reviews = getReviews(id);
+            var favs = getFavourite(id);
+            return View(RecipeRepository.Response2);
+        }
+
 
         public IActionResult About()
         {

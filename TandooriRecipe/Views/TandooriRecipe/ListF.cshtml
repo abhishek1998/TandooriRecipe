@@ -1,0 +1,54 @@
+@model IEnumerable<TandooriRecipe.Models.Favourite>
+
+@{
+    ViewData["Title"] = "Tandoori Recipe Home";
+    Layout = "_Layout";
+}
+
+<h3>Favourite Recipes: </h3>
+@foreach (TandooriRecipe.Models.Favourite item in Model)
+    {
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <p class="display-2">@item.recipeName</p>
+                @* <p class="display-3">@item.Author @item.TimeRequired</p> *@
+@* <p class="lead">@item.Ingredients</p> *@
+<p class="lead">@item.UserName</p>
+    <a asp-action="DisplayRecipe" asp-route-id="@item.RecipeId"><p class="lead"> See Full Recipe </p> </a>
+            </div>
+        </div>
+    }
+
+
+
+@*<h1>List of Recipes</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Recipe Name</th>
+                <th>Username</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (TandooriRecipe.Models.Favourite r in Model)
+            {
+                <tr>
+                    <td><a asp-controller="TandooriRecipe"  asp-action="DisplayPage" asp-route-id="@r.RecipeId">@r.recipeName</a></td>
+                    <td><a asp-controller="TandooriRecipe" asp-action="DisplayPage" asp-route-id="@r.RecipeId">@r.UserName</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>*@
+
+@*@foreach (TandooriRecipe.Models.Favourite item in Model)
+    {
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <p class="display-2">@item.recipeName</p>
+                @* <p class="display-3">@item.Author @item.TimeRequired</p> *@
+@* <p class="lead">@item.Ingredients</p> *@
+@*<p class="lead">@item.UserName</p>
+    <a asp-action="DisplayRecipe" asp-route-id="@item.RecipeId"><p class="lead"> See Full Recipe </p> </a>
+            </div>
+        </div>
+    }*@

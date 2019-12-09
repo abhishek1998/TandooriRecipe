@@ -305,3 +305,7 @@ C:\Users\300985889\Source\Repos\WebAssignmentWorking\TandooriRecipe\obj\Debug\ne
 C:\Users\300985889\Source\Repos\WebAssignmentWorking\TandooriRecipe\obj\Debug\netcoreapp2.1\TandooriRecipe.dll
 C:\Users\300985889\Source\Repos\WebAssignmentWorking\TandooriRecipe\obj\Debug\netcoreapp2.1\TandooriRecipe.pdb
 C:\Users\300985889\Source\Repos\WebAssignmentWorking\TandooriRecipe\obj\Debug\netcoreapp2.1\TandooriRecipe.csproj.CopyComplete
+C:\Users\rohit\Source\Repos\abhishek1998\WebAssignmentWorking\TandooriRecipe\obj\Debug\netcoreapp2.1\Razor\Views\TandooriRecipe\Favourite.g.cshtml.cs
+C:\Users\rohit\Source\Repos\abhishek1998\WebAssignmentWorking\TandooriRecipe\obj\Debug\netcoreapp2.1\Razor\Views\TandooriRecipe\asd.g.cshtml.cs
+C:\Users\rohit\Source\Repos\abhishek1998\WebAssignmentWorking\TandooriRecipe\obj\Debug\netcoreapp2.1\Razor\Views\TandooriRecipe\ListF.g.cshtml.cs
+C:\Users\rohit\Source\Repos\abhishek1998\WebAssignmentWorking\TandooriRecipe\obj\Debug\netcoreapp2.1\Razor\Views\TandooriRecipe\AddReview.g.cshtml.cs

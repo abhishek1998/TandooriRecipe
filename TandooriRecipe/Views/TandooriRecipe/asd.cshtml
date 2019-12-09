@@ -1,0 +1,22 @@
+﻿@using TandooriRecipe.Models
+
+
+@{
+    Layout = "_Layout";
+}
+
+<html>
+<body>
+    @foreach (var favourite in Model.Favourite)
+    {
+        <h3>Ingredients: </h3>
+        <div class="pie-recipe__tips">
+            <div class="pie-recipe__tips__text">
+                @favourite
+            </div>
+            <br>
+        </div>
+    }
+</body>
+
+</html>

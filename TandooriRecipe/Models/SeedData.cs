@@ -23,10 +23,25 @@ namespace TandooriRecipe.Models
                         {
                             recipeItem = new Recipe()
                             {
-                                Author = "kana",
-                                Description = "asdf",
-                                Directions= "asdf",
-                                Name = "ab",
+                                Author = "Kana",
+                                Description = "Ever go to an Indian restaurant and wonder how they make those lentils? I hated " +
+                            "lentils before I discovered Indian food. Then I scoured the internet to figure out " +
+                            "how they achieved them, and through mixing and matching recipes and methods on videos, " +
+                            "I've arrived at this recipe, which I think is pretty close. This version is very rich," +
+                            " but you can leave out the cream to make it lighter. Kasuri methi (fenugreek leaves) is " +
+                            "almost impossible to find in the U.S., even in NYC, but it gives this dish something very special.",
+                                Directions= "Place lentils and kidney beans in a large bowl; cover with plenty of water.Soak for at least 2 hours or overnight.Drain. " +
+                        "Cook lentils, kidney beans, 5 cups water, and salt in a pot over medium heat until tender, stirring occasionally, about 1 hour. " +
+                        "Remove from heat and set aside. Keep the lentils, kidney beans, and any excess cooking water in the pot. " +
+                        "Heat vegetable oil in a saucepan over medium-high heat. Cook cumin seeds in the hot oil until they begin to pop, 1 to 2 minutes. " +
+                        "Add cardamom pods, cinnamon stick, bay leaves, and cloves; cook until bay leaves turn brown, about 1 minute. Reduce heat to medium-low; " +
+                        "add ginger paste, garlic paste, turmeric, and cayenne pepper. Stir to coat." +
+                        "Stir tomato puree into spice mixture; cook over medium heat until slightly reduced, about 5 minutes. Add chili powder, coriander, and butter; " +
+                        "cook and stir until butter is melted. " +
+                        "Stir lentils, kidney beans and any leftover cooking water into tomato mixture; bring to a boil, reduce heat to low. " +
+                        "Stir fenugreek into lentil mixture. Cover saucepan and simmer until heated through, stirring occasionally, about 45 minutes. " +
+                        "Add cream and cook until heated through, 2 to 4 minutes. ",
+                               Name = "Dal Makhani",
 //                                RecipeId = 1
                             },
                             IngredientsItem = new List<Ingredients>()
@@ -34,7 +49,49 @@ namespace TandooriRecipe.Models
                                 new Ingredients()
                                 {
                                     RecipeId = 1,
-                                    Ingredient = "lentils",
+                                    Ingredient = "Lentils",
+//                                    IngredientId = 1,
+                                },
+                                new Ingredients()
+                                {
+                                    RecipeId = 1,
+                                    Ingredient = "Dry Kidney Beans",
+//                                    IngredientId = 1,
+                                },
+                                new Ingredients()
+                                {
+                                    RecipeId = 1,
+                                    Ingredient = "Vegetable Oil",
+//                                    IngredientId = 1,
+                                },
+                                new Ingredients()
+                                {
+                                    RecipeId = 1,
+                                    Ingredient = "Cumin Seed",
+//                                    IngredientId = 1,
+                                },
+                                new Ingredients()
+                                {
+                                    RecipeId = 1,
+                                    Ingredient = "Bay Leaves",
+//                                    IngredientId = 1,
+                                },
+                                new Ingredients()
+                                {
+                                    RecipeId = 1,
+                                    Ingredient = "Whole Cloves",
+//                                    IngredientId = 1,
+                                },
+                                new Ingredients()
+                                {
+                                    RecipeId = 1,
+                                    Ingredient = "Ground Turmeric",
+//                                    IngredientId = 1,
+                                },
+                                new Ingredients()
+                                {
+                                    RecipeId = 1,
+                                    Ingredient = "Cayenne Pepper",
 //                                    IngredientId = 1,
                                 }
                             },
@@ -43,10 +100,97 @@ namespace TandooriRecipe.Models
                                 new Reviews()
                                 {
                                     RecipeId = 1,
-                                    ReviewDesc = "this was good"
+                                    ReviewDesc = "This was very good."
                                 }
                             }
                             
+                        },
+                        new RecipeViewModel()
+                        {
+                            recipeItem = new Recipe()
+                            {
+                                Author = "Kana",
+                                Description = "Ever go to an Indian restaurant and wonder how they make those lentils? I hated " +
+                            "lentils before I discovered Indian food. Then I scoured the internet to figure out " +
+                            "how they achieved them, and through mixing and matching recipes and methods on videos, " +
+                            "I've arrived at this recipe, which I think is pretty close. This version is very rich," +
+                            " but you can leave out the cream to make it lighter. Kasuri methi (fenugreek leaves) is " +
+                            "almost impossible to find in the U.S., even in NYC, but it gives this dish something very special.",
+                                Directions= "Heat olive oil in a large saucepan over medium-high heat. Cook and stir onion in the hot oil until soft and beginning to brown, about 12 minutes. " +
+                        "If browned bits of onion are stuck to the bottom of the pan, stir water into onion and stir to loosen the browned bits. " +
+                        "Mix ground beef, garlic, ginger, serrano chile, and cilantro into pan; cook and stir until beef is browned and crumbly, 10 to 15 minutes. " +
+                        "Reduce heat to medium-low. Stir coriander, salt, cumin, cayenne pepper, and turmeric into the beef; cook and stir until flavors blend, about 5 minutes. " +
+                        "Add tomatoes and potatoes, cover pot, and simmer until potatoes are tender, about 15 minutes. " +
+                        "Mix green peas into dish and cook until sauce has slightly thickened and flavors have blended, 10 to 15 minutes." +
+                        " Sprinkle garam masala over the dish, cover, and let stand for 5 minutes before serving. ",
+                               Name = "Keema Aaloo",
+//                                RecipeId = 1
+                            },
+                            IngredientsItem = new List<Ingredients>()
+                            {
+                                new Ingredients()
+                                {
+                                    RecipeId = 2,
+                                    Ingredient = "Lentils",
+//                                    IngredientId = 1,
+                                },
+                                new Ingredients()
+                                {
+                                    RecipeId = 2,
+                                    Ingredient = "Dry Kidney Beans",
+//                                    IngredientId = 1,
+                                },
+                                new Ingredients()
+                                {
+                                    RecipeId = 2,
+                                    Ingredient = "Vegetable Oil",
+//                                    IngredientId = 1,
+                                },
+                                new Ingredients()
+                                {
+                                    RecipeId = 2,
+                                    Ingredient = "Cumin Seed",
+//                                    IngredientId = 1,
+                                },
+                                new Ingredients()
+                                {
+                                    RecipeId = 2,
+                                    Ingredient = "Bay Leaves",
+//                                    IngredientId = 1,
+                                },
+                                new Ingredients()
+                                {
+                                    RecipeId = 2,
+                                    Ingredient = "Whole Cloves",
+//                                    IngredientId = 1,
+                                },
+                                new Ingredients()
+                                {
+                                    RecipeId = 2,
+                                    Ingredient = "Ground Turmeric",
+//                                    IngredientId = 1,
+                                },
+                                new Ingredients()
+                                {
+                                    RecipeId = 2,
+                                    Ingredient = "Cayenne Pepper",
+//                                    IngredientId = 1,
+                                }
+                            },
+                            ReviewsItem = new List<Reviews>()
+                            {
+                                new Reviews()
+                                {
+                                    RecipeId = 2,
+                                    ReviewDesc = "This was okay."
+                                },
+                                new Reviews()
+                                {
+                                    RecipeId = 2,
+                                    ReviewDesc = "This was not very good."
+                                }
+                            }
+
                         }
                     }
 //                    new RecipeModel()
@@ -199,6 +343,19 @@ namespace TandooriRecipe.Models
                 );
             context.SaveChanges();
         }
+            if (!context.Favourites.Any())
+            {
+                context.Favourites.AddRange(
+                    new Favourite {
+                        RecipeId = 1,
+                        UserName = "Admin",
+                    }
+
+
+                    );
+
+            }
+            context.SaveChanges();
     }
 }
 }

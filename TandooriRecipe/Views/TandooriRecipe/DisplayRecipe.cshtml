@@ -10,34 +10,42 @@
 
 @if (Model.Item1 != null && Model.Item2 != null)
 {
- <div class="pie-recipe__tips"> 
-     @* <h4> @Model.recipeItem.Name</h4>  *@
-     <h4>@Model.Item2.Name </h4>
-     <div class="pie-recipe__tips__text"> 
-    @Model.Item2.Author
-    </div> <br> 
-    <div class="pie-recipe__tips__text"> 
-    @Model.Item2.Description
-     </div> <br> 
+<div class="pie-recipe__tips">
+    @* <h4> @Model.recipeItem.Name</h4>  *@
+    <h4>@Model.Item2.Name </h4>
+    <div class="pie-recipe__tips__text">
+        @Model.Item2.Author
+    </div> <br>
+    <div class="pie-recipe__tips__text">
+        @Model.Item2.Description
+    </div> <br>
 
-    @foreach (var ingredient in Model.Item1) 
-     {
-         <div class="pie-recipe__tips">
-             <div class="pie-recipe__tips__text">
-                 @ingredient.Ingredient
-             </div>
-             <br>
-         </div>
-     }
-       @foreach (var review in Model.Item3)
-       {
-           <div class="pie-recipe__tips">
-               <div class="pie-recipe__tips__text">
-                   @review.ReviewDesc
-               </div>
-               <br>
-           </div>
-       }
+    @foreach (var ingredient in Model.Item1)
+    {
+        <h3>Ingredients: </h3>
+        <div class="pie-recipe__tips">
+            <div class="pie-recipe__tips__text">
+                @ingredient.Ingredient
+            </div>
+            <br>
+        </div>
+    }
+    @foreach (var review in Model.Item3)
+    {
+        <h3>Reviews: </h3>
+        <div class="pie-recipe__tips">
+            <div class="pie-recipe__tips__text">
+                @review.ReviewDesc
+            </div>
+            <br>
+        </div>
+    }
+        <div class="md:flex bg-teal-100 rounded-lg p-3">
+            
+            <a class="text-lg text-purple-800" asp-controller="TandooriRecipe" asp-action="AddFavourite">Add to Favourites</a>
+            <br>
+            <a class="text-lg text-purple-800" asp-controller="TandooriRecipe" asp-action="AddReview">Create Review</a>
+        </div>
 </div>
 }
 

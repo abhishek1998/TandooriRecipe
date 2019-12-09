@@ -55,7 +55,7 @@ namespace TandooriRecipe
                     template: "{controller=TandooriRecipe}/{action=AddRecipe}/{id?}");
             });
             SeedData.EnsurePopulated(app);
-//            IdentitySeedData.EnsurePopulated( app);
+//            IdentitySeedData.EnsurePopulated(app);
         }
     }
 }
